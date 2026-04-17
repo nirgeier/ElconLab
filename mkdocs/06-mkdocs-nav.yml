@@ -45,3 +45,12 @@ nav:
       - 040-n8nProduction: 040-n8nProduction/README.md
       # --- Final Project ---
       - 050-FinalProjectCRM: 050-FinalProjectCRM/README.md
+      # --- Tasks ---
+      - Tasks:
+          - Tasks/index.md
+          - Prompt Engineering: Tasks/PromptEngineering/README.md
+          - Claude Code: Tasks/ClaudeCode/README.md
+          - n8n Workflows: Tasks/n8n/README.md
+          - Supabase & Database: Tasks/Supabase/README.md
+          - Full-Stack Apps: Tasks/FullStack/README.md
+          - Integration: Tasks/Integration/README.md

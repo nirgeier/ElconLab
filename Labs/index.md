@@ -72,6 +72,19 @@ hide:
 
 ---
 
+### Hands-On Tasks
+
+| Category                                                   | Tasks | Topics                                                              |
+| ---------------------------------------------------------- | ----- | ------------------------------------------------------------------- |
+| [Prompt Engineering](Tasks/PromptEngineering/README.md)    | 20    | Zero-shot, few-shot, chain-of-thought, structured output, templates |
+| [Claude Code](Tasks/ClaudeCode/README.md)                  | 25    | CLI mastery, scaffolding, refactoring, testing, security audits     |
+| [n8n Workflows](Tasks/n8n/README.md)                       | 25    | Triggers, webhooks, DB ops, email, AI nodes, error handling         |
+| [Supabase & Database](Tasks/Supabase/README.md)            | 20    | SQL, RLS, functions, triggers, Edge Functions, migrations           |
+| [Full-Stack Apps](Tasks/FullStack/README.md)               | 15    | Next.js, auth, CRUD, dashboards, charts, deployment                 |
+| [Integration](Tasks/Integration/README.md)                 | 15    | End-to-end pipelines, ERP sync, OCR, quote-to-cash                  |
+
+---
+
 ## Tool Ecosystem
 
 | Tool                   | Category                          | What It Does                          |
