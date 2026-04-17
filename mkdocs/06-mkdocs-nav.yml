@@ -1,0 +1,21 @@
+###
+### mkdocs-nav.yml
+###
+
+nav:
+  - Labs:
+      - index.md
+      - welcome.md
+      - 001-AILandscape: 001-AILandscape/README.md
+      - 002-PromptEngineering: 002-PromptEngineering/README.md
+      - 003-BuildingWithClaude: 003-BuildingWithClaude/README.md
+      - 004-DatabaseFundamentals: 004-DatabaseFundamentals/README.md
+      - 005-HostingDeployment: 005-HostingDeployment/README.md
+      - 006-ERPIntegration: 006-ERPIntegration/README.md
+      - 007-n8nBasics: 007-n8nBasics/README.md
+      - 008-n8nAdvanced: 008-n8nAdvanced/README.md
+      - 009-n8nAI: 009-n8nAI/README.md
+      - 010-CursorWindsurf: 010-CursorWindsurf/README.md
+      - 011-SystemArchitecture: 011-SystemArchitecture/README.md
+      - 012-SecurityBestPractices: 012-SecurityBestPractices/README.md
+      - 013-BuildingYourRoadmap: 013-BuildingYourRoadmap/README.md
