@@ -1,0 +1,26 @@
+/* Elcon project-specific overrides */
+
+/* Elecon logo in footer (bottom-left) */
+@media screen and (min-width: 800px) {
+  .logo2 {
+    width: 140px;
+    height: 40px;
+    margin: auto 20px;
+    display: block;
+    position: fixed;
+    left: 30px;
+    bottom: 20px;
+    background-image: url("https://www.elecon.com/views/templates/assets/images/elecon-logo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 0;
+    opacity: 0.85;
+    z-index: 1000;
+    filter: brightness(0) invert(1); /* make SVG white for dark theme */
+    transition: opacity 0.2s ease;
+  }
+  .logo2:hover {
+    opacity: 1;
+  }
+}
