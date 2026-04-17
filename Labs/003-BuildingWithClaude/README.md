@@ -33,10 +33,10 @@ Elcon's procurement team manages 200+ suppliers with weekly purchase orders – 
 
 When you ask Claude to build a web app, it typically generates three types of code:
 
-| Technology     | What It Does                          | Analogy                     |
-| -------------- | ------------------------------------- | --------------------------- |
-| **HTML**       | The structure and content of the page | The skeleton of a building  |
-| **CSS**        | The styling and visual appearance     | The paint, furniture, decor |
+| Technology     | What It Does                          | Analogy                         |
+| -------------- | ------------------------------------- | ------------------------------- |
+| **HTML**       | The structure and content of the page | The skeleton of a building      |
+| **CSS**        | The styling and visual appearance     | The paint, furniture, decor     |
 | **JavaScript** | The behavior and interactivity        | The electrical system, plumbing |
 
 For simple internal tools, all three can live in a **single HTML file** – no server needed.
@@ -52,20 +52,20 @@ For simple internal tools, all three can live in a **single HTML file** – no s
 3. Create a new project called **"Elcon Import Management"**
 4. Add these instructions to the project:
 
-    ```
-    You are helping Elcon, an instrumentation and control company in Israel, 
-    build internal business tools. Elcon has 200+ active suppliers and manages 
-    all purchase orders manually. Applications should be:
-    - Single HTML files with embedded CSS and JavaScript
-    - Clean, modern, professional UI
-    - LocalStorage for data persistence
-    - Support Hebrew text in data fields (RTL where needed)
-    - Mobile-friendly and responsive
-    ```
+   ```
+   You are helping Elcon, an instrumentation and control company in Israel,
+   build internal business tools. Elcon has 200+ active suppliers and manages
+   all purchase orders manually. Applications should be:
+   - Single HTML files with embedded CSS and JavaScript
+   - Clean, modern, professional UI
+   - LocalStorage for data persistence
+   - Support Hebrew text in data fields (RTL where needed)
+   - Mobile-friendly and responsive
+   ```
 
 !!! tip "Why Projects?"
-    
-    Claude Projects remember your context across conversations. You don't need to 
+
+    Claude Projects remember your context across conversations. You don't need to
     re-explain who Elcon is every time you start a new chat.
 
 ### Step 2 – Build the Import Management System
@@ -76,14 +76,14 @@ In your project, start a new conversation. Use this prompt:
 Build an Import Management System for Elcon with the following requirements:
 
 CORE DATA MODEL:
-- Purchase Order (PO): PO number (auto-generated), supplier name, order date, 
-  expected delivery date, status (Draft/Sent/Confirmed/Shipped/Received/Cancelled), 
+- Purchase Order (PO): PO number (auto-generated), supplier name, order date,
+  expected delivery date, status (Draft/Sent/Confirmed/Shipped/Received/Cancelled),
   total value, notes
-- Line Items: part number, description, quantity, unit price, currency (USD/EUR/ILS), 
+- Line Items: part number, description, quantity, unit price, currency (USD/EUR/ILS),
   total price
 
 VIEWS:
-1. Dashboard: KPI cards (total POs, total value, pending deliveries, overdue orders), 
+1. Dashboard: KPI cards (total POs, total value, pending deliveries, overdue orders),
    recent activity list
 2. PO List: sortable/filterable table with all POs, color-coded by status
 3. PO Detail/Edit: form to create or edit a PO with line items
@@ -98,7 +98,7 @@ FEATURES:
 - Overdue alerts (highlight POs past expected delivery date)
 - Simple charts: orders by month, orders by supplier, orders by status
 
-Generate a single HTML file with all CSS and JavaScript embedded. 
+Generate a single HTML file with all CSS and JavaScript embedded.
 Include realistic sample data for 10 suppliers and 20 purchase orders.
 ```
 
@@ -115,7 +115,7 @@ The system works great! A few changes needed:
 1. The date picker should default to today's date
 2. The export CSV is missing the supplier contact info
 3. Add a "duplicate PO" button that copies an existing PO as a new draft
-4. The status colors should be: Draft=gray, Sent=blue, Confirmed=green, 
+4. The status colors should be: Draft=gray, Sent=blue, Confirmed=green,
    Shipped=orange, Received=dark-green, Cancelled=red
 ```
 
@@ -124,16 +124,16 @@ The system works great! A few changes needed:
 Ask Claude to explain the code:
 
 ```
-Can you give me a high-level overview of the code you generated? 
-Explain the main sections (HTML structure, CSS styling, JavaScript functions) 
-in simple terms that a non-developer can understand. 
+Can you give me a high-level overview of the code you generated?
+Explain the main sections (HTML structure, CSS styling, JavaScript functions)
+in simple terms that a non-developer can understand.
 Use a table format to list the main functions and what they do.
 ```
 
 !!! info "You Don't Need to Understand Every Line"
-    
+
     The goal is to understand the **structure** well enough to:
-    
+
     - Know which section to point Claude at when something is wrong
     - Be able to make simple text changes yourself (labels, colors)
     - Understand what's possible and what requires a different approach
@@ -150,7 +150,7 @@ Things you can do with Artifacts:
 - **Publish** – Share a link (Claude Pro feature)
 
 !!! warning "Artifact Limitations"
-    
+
     - Artifacts preview may not support all JavaScript features
     - LocalStorage may not persist in the Artifact preview
     - Always test the final version in a real browser
@@ -160,24 +160,27 @@ Things you can do with Artifacts:
 Now that you have the base system, add these advanced features one at a time:
 
 **Round 1 – Notifications:**
+
 ```
-Add a notification system: when a PO is overdue (past expected delivery date 
-and not in Received/Cancelled status), show a red badge on the dashboard 
+Add a notification system: when a PO is overdue (past expected delivery date
+and not in Received/Cancelled status), show a red badge on the dashboard
 and a notification bell icon in the top-right corner.
 ```
 
 **Round 2 – Multi-currency:**
+
 ```
-Add multi-currency support: each line item can be in USD, EUR, or ILS. 
-Show the total in each currency and also a combined total in ILS using 
+Add multi-currency support: each line item can be in USD, EUR, or ILS.
+Show the total in each currency and also a combined total in ILS using
 fixed exchange rates (1 USD = 3.7 ILS, 1 EUR = 4.0 ILS).
 ```
 
 **Round 3 – Print-friendly:**
+
 ```
-Add a "Print PO" button that opens a clean, print-friendly version 
-of a specific purchase order – suitable for sending to a supplier 
-(include Elcon logo placeholder, PO details, line items table, 
+Add a "Print PO" button that opens a clean, print-friendly version
+of a specific purchase order – suitable for sending to a supplier
+(include Elcon logo placeholder, PO details, line items table,
 and space for signature).
 ```
 

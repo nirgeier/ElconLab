@@ -26,15 +26,15 @@
 
 ### Why n8n?
 
-| Feature              | n8n                          | Zapier                | Make (Integromat)    |
-| -------------------- | ---------------------------- | --------------------- | -------------------- |
-| Self-hosted          | ✅ Yes (free)                | ❌ No                 | ❌ No                |
-| Data stays on server | ✅ Yes                       | ❌ No                 | ❌ No                |
-| Workflows            | ♾️ Unlimited (self-hosted)   | Limited by plan       | Limited by plan      |
-| Database connections | ✅ Direct SQL                | ❌ Via connectors     | ⚠️ Limited           |
-| AI nodes             | ✅ Claude, OpenAI, etc.      | ⚠️ Limited            | ⚠️ Limited           |
-| Code nodes           | ✅ JavaScript & Python       | ❌ No                 | ⚠️ Limited           |
-| Price                | Free (self-hosted)           | $20-600/mo            | $10-300/mo           |
+| Feature              | n8n                        | Zapier            | Make (Integromat) |
+| -------------------- | -------------------------- | ----------------- | ----------------- |
+| Self-hosted          | ✅ Yes (free)              | ❌ No             | ❌ No             |
+| Data stays on server | ✅ Yes                     | ❌ No             | ❌ No             |
+| Workflows            | ♾️ Unlimited (self-hosted) | Limited by plan   | Limited by plan   |
+| Database connections | ✅ Direct SQL              | ❌ Via connectors | ⚠️ Limited        |
+| AI nodes             | ✅ Claude, OpenAI, etc.    | ⚠️ Limited        | ⚠️ Limited        |
+| Code nodes           | ✅ JavaScript & Python     | ❌ No             | ⚠️ Limited        |
+| Price                | Free (self-hosted)         | $20-600/mo        | $10-300/mo        |
 
 ### Core Concepts
 
@@ -43,19 +43,19 @@ graph LR
     T[Trigger<br/>Starts the workflow] --> N1[Node 1<br/>Get data]
     N1 --> N2[Node 2<br/>Transform]
     N2 --> N3[Node 3<br/>Send result]
-    
+
     style T fill:#e1f5fe
     style N3 fill:#e8f5e9
 ```
 
-| Concept        | What It Is                                                            |
-| -------------- | --------------------------------------------------------------------- |
-| **Trigger**    | What starts the workflow (schedule, webhook, new data, manual)        |
-| **Node**       | A single step that does something (get data, transform, send email)   |
-| **Connection** | The wire between nodes that carries data                              |
-| **Workflow**   | The complete chain of trigger + nodes                                 |
-| **Execution**  | One complete run of a workflow                                        |
-| **Credential** | Saved login info for connecting to external services                  |
+| Concept        | What It Is                                                          |
+| -------------- | ------------------------------------------------------------------- |
+| **Trigger**    | What starts the workflow (schedule, webhook, new data, manual)      |
+| **Node**       | A single step that does something (get data, transform, send email) |
+| **Connection** | The wire between nodes that carries data                            |
+| **Workflow**   | The complete chain of trigger + nodes                               |
+| **Execution**  | One complete run of a workflow                                      |
+| **Credential** | Saved login info for connecting to external services                |
 
 ---
 
@@ -86,23 +86,23 @@ Access at `http://localhost:5678`
 Build a workflow that checks for overdue purchase orders every morning:
 
 1. **Add a Schedule Trigger** – Click the `+` button and search for "Schedule"
-    - Set to run every day at 8:00 AM
-    
+   - Set to run every day at 8:00 AM
+
 2. **Add a Supabase Node** – Search for "Supabase" or use "HTTP Request"
-    - Method: GET
-    - URL: `https://YOUR_PROJECT.supabase.co/rest/v1/purchase_orders`
-    - Headers: 
-        - `apikey`: your anon key
-        - `Authorization`: `Bearer your_anon_key`
-    - Query: `?status=neq.Received&status=neq.Cancelled&expected_delivery=lt.2026-04-17`
+   - Method: GET
+   - URL: `https://YOUR_PROJECT.supabase.co/rest/v1/purchase_orders`
+   - Headers:
+     - `apikey`: your anon key
+     - `Authorization`: `Bearer your_anon_key`
+   - Query: `?status=neq.Received&status=neq.Cancelled&expected_delivery=lt.2026-04-17`
 
 3. **Add an IF Node** – Check if there are any results
-    - Condition: `{{ $json.length > 0 }}`
+   - Condition: `{{ $json.length > 0 }}`
 
 4. **Add an Email Node** – Send notification if overdue orders exist
-    - To: procurement@elcon.co.il
-    - Subject: `⚠️ {{ $json.length }} Overdue Purchase Orders`
-    - Body: List the overdue POs
+   - To: procurement@elcon.co.il
+   - Subject: `⚠️ {{ $json.length }} Overdue Purchase Orders`
+   - Body: List the overdue POs
 
 5. **Test the workflow** – Click "Execute Workflow"
 
@@ -117,12 +117,12 @@ Schedule Trigger     →    HTTP Request      →    IF Node       →    Email
 ```
 
 !!! tip "Debugging Data Flow"
-    
+
     Click on any node after execution to see:
     - **Input**: what data came in
     - **Output**: what data goes out
     - **Settings**: the node configuration
-    
+
     This is the most powerful debugging tool in n8n.
 
 ### Step 4 – Webhook Workflow
@@ -138,6 +138,7 @@ External System → Webhook URL → Transform Data → Save to Supabase
 ```
 
 This pattern is useful for:
+
 - Receiving data from Smadar (delivery note scans)
 - Accepting form submissions
 - Integrating with any system that can send HTTP requests

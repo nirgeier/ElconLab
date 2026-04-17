@@ -28,14 +28,14 @@
 
 For each current system, evaluate the pain level and replacement feasibility:
 
-| Current System   | Pain Level | Replacement Effort | Potential Savings          | Priority |
-| ---------------- | ---------- | ------------------- | -------------------------- | -------- |
-| Excel (imports)  | 🔴 High   | 🟢 Easy (done!)    | Hours/week of manual work  | ✅ Done  |
-| Monday.com       | 🟡 Medium | 🟢 Easy            | Monthly subscription       | High     |
-| Drawing Mgmt     | 🟡 Medium | 🟡 Medium          | Search time, lost drawings | High     |
-| Smadar           | 🟡 Medium | 🟡 Medium          | Manual data entry          | Medium   |
-| Wiznet CRM       | 🟢 Low    | 🔴 Hard            | Better integration         | Low      |
-| Hashavshevet ERP | 🔴 High   | 🔴 Very Hard       | Better visibility          | Long-term|
+| Current System   | Pain Level | Replacement Effort | Potential Savings          | Priority  |
+| ---------------- | ---------- | ------------------ | -------------------------- | --------- |
+| Excel (imports)  | 🔴 High    | 🟢 Easy (done!)    | Hours/week of manual work  | ✅ Done   |
+| Monday.com       | 🟡 Medium  | 🟢 Easy            | Monthly subscription       | High      |
+| Drawing Mgmt     | 🟡 Medium  | 🟡 Medium          | Search time, lost drawings | High      |
+| Smadar           | 🟡 Medium  | 🟡 Medium          | Manual data entry          | Medium    |
+| Wiznet CRM       | 🟢 Low     | 🔴 Hard            | Better integration         | Low       |
+| Hashavshevet ERP | 🔴 High    | 🔴 Very Hard       | Better visibility          | Long-term |
 
 ### Step 2 – Define the Phases
 
@@ -47,12 +47,12 @@ For each current system, evaluate the pain level and replacement feasibility:
        - Migrate from LocalStorage to Supabase
        - Deploy to Vercel
        - Roll out to procurement team
-    
+
     2. **Monday.com Replacement**
        - Build task management app with Claude
        - Set up n8n notifications
        - Migrate existing tasks
-    
+
     3. **Drawing Management Lookup**
        - Build search interface with Claude
        - Index existing file server drawings
@@ -67,12 +67,12 @@ For each current system, evaluate the pain level and replacement feasibility:
        - Build PO → Supplier email automation
        - Build overdue order notifications
        - Build weekly management reports
-    
+
     5. **Delivery Note Processing**
        - n8n + Claude API for OCR
        - Auto-match to purchase orders
        - Replace/complement Smadar
-    
+
     6. **Self-Hosted Infrastructure**
        - Install Coolify on Elcon server
        - Deploy PostgreSQL database
@@ -87,12 +87,12 @@ For each current system, evaluate the pain level and replacement feasibility:
        - Build n8n sync workflows
        - Create ERP dashboards
        - Financial reporting automation
-    
+
     8. **CRM Integration**
        - Sync Wiznet data to central database
        - Build customer 360° dashboard
        - Automate customer communication
-    
+
     9. **Full System Integration**
        - Connect all systems through n8n
        - Central dashboard for management
@@ -102,16 +102,16 @@ For each current system, evaluate the pain level and replacement feasibility:
 
 For each system, assign clear ownership:
 
-| System                 | Owner (Builder) | Owner (Maintainer) | Stakeholder      |
-| ---------------------- | --------------- | ------------------- | ---------------- |
-| Import Management      | [Name]          | [Name]              | Procurement Mgr  |
-| Task Management        | [Name]          | [Name]              | Operations Mgr   |
-| Drawing Management     | [Name]          | [Name]              | Engineering Mgr  |
-| n8n Workflows          | [Name]          | [Name]              | IT / Operations  |
-| ERP Dashboards         | [Name]          | [Name]              | Management       |
+| System             | Owner (Builder) | Owner (Maintainer) | Stakeholder     |
+| ------------------ | --------------- | ------------------ | --------------- |
+| Import Management  | [Name]          | [Name]             | Procurement Mgr |
+| Task Management    | [Name]          | [Name]             | Operations Mgr  |
+| Drawing Management | [Name]          | [Name]             | Engineering Mgr |
+| n8n Workflows      | [Name]          | [Name]             | IT / Operations |
+| ERP Dashboards     | [Name]          | [Name]             | Management      |
 
 !!! tip "Ownership Rules"
-    
+
     1. Every system must have **one owner** (not a committee)
     2. The owner doesn't do everything – they make sure it gets done
     3. The builder and maintainer can be different people
@@ -121,21 +121,21 @@ For each system, assign clear ownership:
 
 #### YouTube Channels
 
-| Channel                | Focus                | Level       |
-| ---------------------- | -------------------- | ----------- |
-| n8n Official           | n8n tutorials        | Beginner    |
-| Supabase Official      | Database & backend   | Beginner    |
-| Fireship               | Web dev, fast-paced  | Intermediate|
-| NetworkChuck           | IT infrastructure    | Beginner    |
+| Channel           | Focus               | Level        |
+| ----------------- | ------------------- | ------------ |
+| n8n Official      | n8n tutorials       | Beginner     |
+| Supabase Official | Database & backend  | Beginner     |
+| Fireship          | Web dev, fast-paced | Intermediate |
+| NetworkChuck      | IT infrastructure   | Beginner     |
 
 #### Communities
 
-| Community              | Platform             | Language    |
-| ---------------------- | -------------------- | ----------- |
-| n8n Community          | community.n8n.io     | English     |
-| Supabase Discord       | discord.supabase.com | English     |
-| Claude Discord         | discord.gg/anthropic | English     |
-| Israeli Tech Facebook  | Various groups       | Hebrew      |
+| Community             | Platform             | Language |
+| --------------------- | -------------------- | -------- |
+| n8n Community         | community.n8n.io     | English  |
+| Supabase Discord      | discord.supabase.com | English  |
+| Claude Discord        | discord.gg/anthropic | English  |
+| Israeli Tech Facebook | Various groups       | Hebrew   |
 
 #### Practice
 
@@ -190,8 +190,8 @@ In this lab you:
 ---
 
 !!! success "Congratulations! 🎉"
-    
-    You've completed the AI-Powered Business Systems training. 
+
+    You've completed the AI-Powered Business Systems training.
     You now have the knowledge and tools to transform Elcon's internal operations.
-    
+
     Remember: **Start small, iterate fast, and don't be afraid to ask Claude for help.**

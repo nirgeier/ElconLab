@@ -28,11 +28,11 @@
 ### The Security Mindset
 
 !!! danger "Common Misconception"
-    
+
     "It's just an internal tool, security doesn't matter."
-    
+
     **Wrong.** Internal tools often have access to sensitive data:
-    supplier pricing, customer information, financial data. 
+    supplier pricing, customer information, financial data.
     One compromised tool can expose your entire business.
 
 ### Security Layers
@@ -94,7 +94,7 @@ Not everyone should have the same access. Create a roles system:
 CREATE TABLE profiles (
     id      UUID REFERENCES auth.users(id) PRIMARY KEY,
     email   TEXT,
-    role    TEXT DEFAULT 'viewer' 
+    role    TEXT DEFAULT 'viewer'
             CHECK (role IN ('admin', 'editor', 'viewer')),
     name    TEXT,
     department TEXT
@@ -118,14 +118,14 @@ CREATE TRIGGER on_auth_user_created
 
 **Role permissions:**
 
-| Action           | Admin | Editor | Viewer |
-| ---------------- | ----- | ------ | ------ |
-| View data        | ✅    | ✅     | ✅     |
-| Create records   | ✅    | ✅     | ❌     |
-| Edit records     | ✅    | ✅     | ❌     |
-| Delete records   | ✅    | ❌     | ❌     |
-| Manage users     | ✅    | ❌     | ❌     |
-| Export data      | ✅    | ✅     | ❌     |
+| Action         | Admin | Editor | Viewer |
+| -------------- | ----- | ------ | ------ |
+| View data      | ✅    | ✅     | ✅     |
+| Create records | ✅    | ✅     | ❌     |
+| Edit records   | ✅    | ✅     | ❌     |
+| Delete records | ✅    | ❌     | ❌     |
+| Manage users   | ✅    | ❌     | ❌     |
+| Export data    | ✅    | ✅     | ❌     |
 
 ### Step 3 – Row Level Security (RLS)
 
@@ -166,12 +166,13 @@ CREATE POLICY "Admins can delete orders" ON purchase_orders
 ### Step 4 – Backup Strategy
 
 !!! warning "The 3-2-1 Backup Rule"
-    
+
     - **3** copies of your data
     - **2** different storage types
     - **1** offsite (off your server)
 
 **Supabase backups:**
+
 - Supabase Pro plans include daily backups
 - Self-hosted: set up `pg_dump` on a cron schedule
 
@@ -182,6 +183,7 @@ Schedule (daily 2 AM) → Export Supabase tables → Save to cloud storage → V
 ```
 
 **Git is your code backup:**
+
 - Every commit is a snapshot
 - GitHub stores your code offsite
 - You can always revert to any previous version
@@ -193,28 +195,28 @@ Use this checklist for every app you deploy:
 !!! note "Production Security Checklist"
 
     **Authentication:**
-    
+
     - [ ] Login required for all pages
     - [ ] Passwords must be at least 8 characters
     - [ ] Session timeout after inactivity
     - [ ] HTTPS only (no HTTP)
-    
+
     **Database:**
-    
+
     - [ ] Row Level Security enabled on all tables
     - [ ] API keys are not hardcoded in public code
     - [ ] Database not directly accessible from internet
     - [ ] Regular backups configured and tested
-    
+
     **Application:**
-    
+
     - [ ] Input validation on all forms
     - [ ] No sensitive data in URL parameters
     - [ ] Error messages don't expose internal details
     - [ ] Audit log for important actions
-    
+
     **Infrastructure:**
-    
+
     - [ ] Server firewall configured
     - [ ] SSH key authentication (no password login)
     - [ ] Regular OS and software updates

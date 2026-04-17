@@ -33,30 +33,30 @@ graph TB
             ERP["Hashavshevet<br/>ERP (SQL Server)"]
             PG["PostgreSQL<br/>(Supabase self-hosted)"]
         end
-        
+
         subgraph "Automation"
             N8N["n8n<br/>Workflow Engine"]
         end
-        
+
         subgraph "Applications"
             IMS["Import Management"]
             DMS["Drawing Management"]
             DASH["ERP Dashboards"]
             TASKS["Task Management"]
         end
-        
+
         subgraph "Platform"
             COOL["Coolify<br/>Deployment Manager"]
             NGINX["Nginx<br/>Reverse Proxy"]
         end
     end
-    
+
     subgraph "External Services"
         CRM["Wiznet CRM"]
         EMAIL["Email Server"]
         CLAUDE["Claude API"]
     end
-    
+
     ERP -->|read-only| N8N
     N8N -->|sync data| PG
     PG --> IMS
@@ -83,13 +83,13 @@ graph TB
 
 Docker puts each application in its own "container" – an isolated, portable package:
 
-| Concept       | Analogy                                    | What It Means                              |
-| ------------- | ------------------------------------------ | ------------------------------------------ |
-| **Image**     | A recipe                                   | The blueprint for your application         |
-| **Container** | A dish made from the recipe                | A running instance of your application     |
-| **Volume**    | A storage shelf                            | Persistent data that survives restarts     |
-| **Network**   | A table where dishes are served together   | How containers talk to each other          |
-| **Compose**   | A full menu with all dishes                | A file defining all your containers        |
+| Concept       | Analogy                                  | What It Means                          |
+| ------------- | ---------------------------------------- | -------------------------------------- |
+| **Image**     | A recipe                                 | The blueprint for your application     |
+| **Container** | A dish made from the recipe              | A running instance of your application |
+| **Volume**    | A storage shelf                          | Persistent data that survives restarts |
+| **Network**   | A table where dishes are served together | How containers talk to each other      |
+| **Compose**   | A full menu with all dishes              | A file defining all your containers    |
 
 **Why Docker for Elcon?**
 
@@ -104,7 +104,7 @@ Here's what Elcon's complete stack looks like as Docker Compose:
 
 ```yaml
 # docker-compose.yml - Elcon Internal Systems
-version: '3.8'
+version: "3.8"
 
 services:
   # PostgreSQL Database
@@ -174,8 +174,8 @@ volumes:
 ```
 
 !!! info "Don't Worry About the Details"
-    
-    You don't need to write Docker Compose files by hand. 
+
+    You don't need to write Docker Compose files by hand.
     Ask Claude to generate them, or use Coolify which handles this automatically.
 
 ### Step 3 – Self-Hosting with Coolify
@@ -235,10 +235,10 @@ curl -fsSL https://cdn.coollabs.io/coolify/install.sh | bash
 ```
 
 !!! tip "Start Simple, Grow Later"
-    
-    Phase 1: Deploy on Vercel (free, easy)  
-    Phase 2: Deploy n8n on your server  
-    Phase 3: Move everything to your server with Coolify  
+
+    Phase 1: Deploy on Vercel (free, easy)
+    Phase 2: Deploy n8n on your server
+    Phase 3: Move everything to your server with Coolify
     Phase 4: Connect to Hashavshevet ERP
 
 ---

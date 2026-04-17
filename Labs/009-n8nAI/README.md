@@ -27,12 +27,12 @@
 
 ### AI + Automation = Superpowers
 
-| Traditional Automation              | AI-Powered Automation                        |
-| ----------------------------------- | -------------------------------------------- |
-| Moves data between systems          | Understands and interprets data              |
-| Follows exact rules                 | Handles ambiguous inputs                     |
-| Can only process structured data    | Can read PDFs, images, free-text emails      |
-| Rules must be coded for every case  | AI generalizes from examples                 |
+| Traditional Automation             | AI-Powered Automation                   |
+| ---------------------------------- | --------------------------------------- |
+| Moves data between systems         | Understands and interprets data         |
+| Follows exact rules                | Handles ambiguous inputs                |
+| Can only process structured data   | Can read PDFs, images, free-text emails |
+| Rules must be coded for every case | AI generalizes from examples            |
 
 ---
 
@@ -95,18 +95,18 @@ Receive PDF → AI extracts structured data → Compare with existing prices →
 1. **Webhook** – Receives the PDF file
 2. **AI Node (Claude)** – Send the PDF content with this prompt:
 
-    ```
-    Extract all items from this supplier price list. 
-    For each item, provide:
-    - part_number
-    - description
-    - unit_price
-    - currency
-    - minimum_order_quantity (if specified)
-    - lead_time (if specified)
-    
-    Return as a JSON array.
-    ```
+   ```
+   Extract all items from this supplier price list.
+   For each item, provide:
+   - part_number
+   - description
+   - unit_price
+   - currency
+   - minimum_order_quantity (if specified)
+   - lead_time (if specified)
+
+   Return as a JSON array.
+   ```
 
 3. **Code Node** – Compare extracted prices with existing database prices
 4. **IF Node** – Check if any prices changed

@@ -27,7 +27,7 @@
 
 ### The Dream
 
-> "My dream is to give access to these systems to my server where the ERP database sits, 
+> "My dream is to give access to these systems to my server where the ERP database sits,
 > and then I could do beautiful things."
 
 This is achievable with the right architecture.
@@ -52,7 +52,7 @@ Hashavshevet          Middleware              Frontend
 ```
 
 !!! danger "Critical Security Rules"
-    
+
     1. **NEVER** expose the ERP database directly to the internet
     2. **ALWAYS** use a read-only database user (no INSERT/UPDATE/DELETE)
     3. **LIMIT** access to specific tables and views only
@@ -67,18 +67,18 @@ Hashavshevet          Middleware              Frontend
 
 Hashavshevet uses Microsoft SQL Server. Common tables you might want to access:
 
-| Table/View          | Contains                              | Use Case                    |
-| ------------------- | ------------------------------------- | --------------------------- |
-| Customers           | Customer information                  | Customer dashboards         |
-| Suppliers           | Supplier information                  | Supplier analytics          |
-| Invoices            | Sales and purchase invoices           | Financial reports           |
-| Items               | Product/part catalog                  | Inventory lookups           |
-| Transactions        | Financial transactions                | Cash flow analysis          |
-| Documents           | Delivery notes, receipts              | Document tracking           |
+| Table/View   | Contains                    | Use Case            |
+| ------------ | --------------------------- | ------------------- |
+| Customers    | Customer information        | Customer dashboards |
+| Suppliers    | Supplier information        | Supplier analytics  |
+| Invoices     | Sales and purchase invoices | Financial reports   |
+| Items        | Product/part catalog        | Inventory lookups   |
+| Transactions | Financial transactions      | Cash flow analysis  |
+| Documents    | Delivery notes, receipts    | Document tracking   |
 
 !!! warning "Check with Your Accountant"
-    
-    The exact table names and structure depend on your Hashavshevet version 
+
+    The exact table names and structure depend on your Hashavshevet version
     and configuration. Always verify with your accountant or IT team.
 
 ### Step 2 – Set Up a Read-Only User (Conceptual)
@@ -98,7 +98,7 @@ GRANT SELECT ON dbo.Items TO elcon_readonly;
 
 -- Optionally create views for common queries
 CREATE VIEW vw_MonthlyRevenue AS
-SELECT 
+SELECT
     YEAR(InvoiceDate) as Year,
     MONTH(InvoiceDate) as Month,
     SUM(TotalAmount) as Revenue
@@ -168,14 +168,15 @@ ERP (SQL Server) ──▶ n8n (scheduled query) ──▶ Supabase (mirror tabl
 ```
 
 This approach:
+
 - Keeps the ERP isolated and secure
 - Copies only the data you need
 - Runs on a schedule (e.g., every hour)
 - Can transform data along the way
 
 !!! info "We'll Build This in Lab 008"
-    
-    In the n8n labs, we'll create the actual workflow that syncs data from 
+
+    In the n8n labs, we'll create the actual workflow that syncs data from
     a database to Supabase on a schedule.
 
 ---

@@ -65,9 +65,9 @@ CREATE TABLE tasks (
     title       TEXT NOT NULL,
     description TEXT,
     assigned_to TEXT,
-    status      TEXT DEFAULT 'To Do' 
+    status      TEXT DEFAULT 'To Do'
                 CHECK (status IN ('To Do','In Progress','Review','Done')),
-    priority    TEXT DEFAULT 'Medium' 
+    priority    TEXT DEFAULT 'Medium'
                 CHECK (priority IN ('Low','Medium','High','Urgent')),
     due_date    DATE,
     project     TEXT,
@@ -130,7 +130,7 @@ Webhook (receives image) → OCR extraction → Match to PO → Update PO status
 ```
 
 !!! info "OCR Options"
-    
+
     - Use Claude's vision capability via API to read the delivery note image
     - Or use a dedicated OCR service (Google Vision, AWS Textract)
     - n8n has nodes for both approaches

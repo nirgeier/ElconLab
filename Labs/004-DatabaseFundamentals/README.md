@@ -27,14 +27,14 @@
 
 ### Why Move Beyond LocalStorage?
 
-| Feature           | LocalStorage                | Supabase (PostgreSQL)           |
-| ----------------- | --------------------------- | ------------------------------- |
-| Data size         | ~5 MB per domain            | Unlimited (500 MB free tier)    |
-| Multi-user        | No – each browser is separate | Yes – shared database           |
-| Data safety       | Lost if browser cleared     | Cloud-backed, persistent        |
-| Search            | Manual JavaScript filtering | SQL queries, full-text search   |
-| API access        | None                        | Auto-generated REST & GraphQL   |
-| Authentication    | None                        | Built-in user management        |
+| Feature        | LocalStorage                  | Supabase (PostgreSQL)         |
+| -------------- | ----------------------------- | ----------------------------- |
+| Data size      | ~5 MB per domain              | Unlimited (500 MB free tier)  |
+| Multi-user     | No – each browser is separate | Yes – shared database         |
+| Data safety    | Lost if browser cleared       | Cloud-backed, persistent      |
+| Search         | Manual JavaScript filtering   | SQL queries, full-text search |
+| API access     | None                          | Auto-generated REST & GraphQL |
+| Authentication | None                          | Built-in user management      |
 
 ### What Is Supabase?
 
@@ -56,31 +56,31 @@ Supabase is an open-source alternative to Firebase that gives you:
 1. Go to [supabase.com](https://supabase.com) and sign in
 2. Click **New Project**
 3. Settings:
-    - Name: `elcon-apps`
-    - Database Password: (save this somewhere safe!)
-    - Region: Choose the closest (e.g., Frankfurt for Israel)
+   - Name: `elcon-apps`
+   - Database Password: (save this somewhere safe!)
+   - Region: Choose the closest (e.g., Frankfurt for Israel)
 4. Wait for the project to be created (~2 minutes)
 
 ### Step 2 – Create Your First Table
 
 Go to the **Table Editor** in the left sidebar and create a `suppliers` table:
 
-| Column Name    | Type      | Default     | Notes                     |
-| -------------- | --------- | ----------- | ------------------------- |
-| id             | uuid      | gen_random_uuid() | Primary key (auto)   |
-| created_at     | timestamptz | now()     | Auto timestamp            |
-| name           | text      |             | Supplier company name     |
-| contact_person | text      |             | Primary contact name      |
-| email          | text      |             | Contact email             |
-| phone          | text      |             | Contact phone             |
-| category       | text      |             | e.g., Electronics, Mechanical |
-| country        | text      |             | Supplier country          |
-| is_active      | boolean   | true        | Active/inactive flag      |
+| Column Name    | Type        | Default           | Notes                         |
+| -------------- | ----------- | ----------------- | ----------------------------- |
+| id             | uuid        | gen_random_uuid() | Primary key (auto)            |
+| created_at     | timestamptz | now()             | Auto timestamp                |
+| name           | text        |                   | Supplier company name         |
+| contact_person | text        |                   | Primary contact name          |
+| email          | text        |                   | Contact email                 |
+| phone          | text        |                   | Contact phone                 |
+| category       | text        |                   | e.g., Electronics, Mechanical |
+| country        | text        |                   | Supplier country              |
+| is_active      | boolean     | true              | Active/inactive flag          |
 
 !!! tip "Using the SQL Editor"
-    
+
     Alternatively, go to the **SQL Editor** and run:
-    
+
     ```sql
     CREATE TABLE suppliers (
         id          UUID DEFAULT gen_random_uuid() PRIMARY KEY,
@@ -114,7 +114,7 @@ CREATE TABLE purchase_orders (
     supplier_id     UUID REFERENCES suppliers(id),
     order_date      DATE DEFAULT CURRENT_DATE,
     expected_delivery DATE,
-    status          TEXT DEFAULT 'Draft' 
+    status          TEXT DEFAULT 'Draft'
                     CHECK (status IN ('Draft','Sent','Confirmed','Shipped','Received','Cancelled')),
     total_value     DECIMAL(12,2) DEFAULT 0,
     currency        TEXT DEFAULT 'USD' CHECK (currency IN ('USD','EUR','ILS')),
@@ -172,26 +172,26 @@ Supabase comes with powerful built-in tools:
 - **Authentication** – Set up user accounts (we'll use this in Lab 012)
 
 !!! note "Practice SQL Queries"
-    
+
     Go to the SQL Editor and try these queries:
-    
+
     ```sql
     -- Count orders by status
-    SELECT status, COUNT(*) as count 
-    FROM purchase_orders 
+    SELECT status, COUNT(*) as count
+    FROM purchase_orders
     GROUP BY status;
 
     -- Find overdue orders
-    SELECT po_number, expected_delivery, status 
-    FROM purchase_orders 
-    WHERE expected_delivery < CURRENT_DATE 
+    SELECT po_number, expected_delivery, status
+    FROM purchase_orders
+    WHERE expected_delivery < CURRENT_DATE
     AND status NOT IN ('Received', 'Cancelled');
 
     -- Top suppliers by order value
-    SELECT s.name, SUM(po.total_value) as total 
-    FROM purchase_orders po 
-    JOIN suppliers s ON po.supplier_id = s.id 
-    GROUP BY s.name 
+    SELECT s.name, SUM(po.total_value) as total
+    FROM purchase_orders po
+    JOIN suppliers s ON po.supplier_id = s.id
+    GROUP BY s.name
     ORDER BY total DESC;
     ```
 

@@ -35,14 +35,14 @@ Your Laptop → GitHub (code storage) → Vercel (hosting) → https://your-app.
 
 ### Hosting Options Compared
 
-| Option              | Cost   | Difficulty | Best For                              |
-| ------------------- | ------ | ---------- | ------------------------------------- |
-| **Vercel**          | Free   | Easy       | Static sites, simple apps             |
-| **Netlify**         | Free   | Easy       | Same as Vercel, alternative           |
-| **Railway**         | ~$5/mo | Medium     | Apps with backend/server              |
-| **Render**          | Free   | Medium     | Backend services, databases           |
-| **Elcon Server**    | Free   | Hard       | Full control, internal-only access    |
-| **Coolify**         | Free   | Medium     | Self-hosted deployment platform       |
+| Option           | Cost   | Difficulty | Best For                           |
+| ---------------- | ------ | ---------- | ---------------------------------- |
+| **Vercel**       | Free   | Easy       | Static sites, simple apps          |
+| **Netlify**      | Free   | Easy       | Same as Vercel, alternative        |
+| **Railway**      | ~$5/mo | Medium     | Apps with backend/server           |
+| **Render**       | Free   | Medium     | Backend services, databases        |
+| **Elcon Server** | Free   | Hard       | Full control, internal-only access |
+| **Coolify**      | Free   | Medium     | Self-hosted deployment platform    |
 
 ---
 
@@ -90,9 +90,9 @@ git push
 6. Wait ~30 seconds – your app is live! 🎉
 
 !!! success "Your App is Live"
-    
+
     Vercel gives you a URL like `https://elcon-import-management.vercel.app`
-    
+
     Share this URL with your team – they can access the app from any device.
 
 ### Step 4 – Automatic Deployments
@@ -130,8 +130,8 @@ For Elcon's long-term architecture, you may want to host everything on your own 
 ```
 
 !!! info "Self-Hosting with Coolify"
-    
-    [Coolify](https://coolify.io) is an open-source platform that makes self-hosting as easy as Vercel. 
+
+    [Coolify](https://coolify.io) is an open-source platform that makes self-hosting as easy as Vercel.
     It can deploy apps, databases, and services with a visual UI. We'll revisit this in Lab 011.
 
 ---

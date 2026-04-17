@@ -6,6 +6,7 @@ nav:
   - Labs:
       - index.md
       - welcome.md
+      # --- Foundations (001-013) ---
       - 001-AILandscape: 001-AILandscape/README.md
       - 002-PromptEngineering: 002-PromptEngineering/README.md
       - 003-BuildingWithClaude: 003-BuildingWithClaude/README.md
@@ -19,3 +20,28 @@ nav:
       - 011-SystemArchitecture: 011-SystemArchitecture/README.md
       - 012-SecurityBestPractices: 012-SecurityBestPractices/README.md
       - 013-BuildingYourRoadmap: 013-BuildingYourRoadmap/README.md
+      # --- Claude Code Deep Dive (020-030) ---
+      - 020-ClaudeCodeIntro: 020-ClaudeCodeIntro/README.md
+      - 021-ClaudeCodeConfig: 021-ClaudeCodeConfig/README.md
+      - 022-ClaudeCodeFullStack: 022-ClaudeCodeFullStack/README.md
+      - 023-ClaudeCodeExisting: 023-ClaudeCodeExisting/README.md
+      - 024-ClaudeCodeDatabase: 024-ClaudeCodeDatabase/README.md
+      - 025-ClaudeCodeGit: 025-ClaudeCodeGit/README.md
+      - 026-ClaudeCodeTesting: 026-ClaudeCodeTesting/README.md
+      - 027-ClaudeCodeAPI: 027-ClaudeCodeAPI/README.md
+      - 028-ClaudeCodeUIUX: 028-ClaudeCodeUIUX/README.md
+      - 029-ClaudeCodeAutomation: 029-ClaudeCodeAutomation/README.md
+      - 030-ClaudeCodeAdvanced: 030-ClaudeCodeAdvanced/README.md
+      # --- n8n Deep Dive (031-040) ---
+      - 031-n8nInstallation: 031-n8nInstallation/README.md
+      - 032-n8nTriggersDataFlow: 032-n8nTriggersDataFlow/README.md
+      - 033-n8nDatabase: 033-n8nDatabase/README.md
+      - 034-n8nHTTPAPIs: 034-n8nHTTPAPIs/README.md
+      - 035-n8nEmailNotifications: 035-n8nEmailNotifications/README.md
+      - 036-n8nFileProcessing: 036-n8nFileProcessing/README.md
+      - 037-n8nAIIntegration: 037-n8nAIIntegration/README.md
+      - 038-n8nErrorHandling: 038-n8nErrorHandling/README.md
+      - 039-n8nAdvancedPatterns: 039-n8nAdvancedPatterns/README.md
+      - 040-n8nProduction: 040-n8nProduction/README.md
+      # --- Final Project ---
+      - 050-FinalProjectCRM: 050-FinalProjectCRM/README.md

@@ -27,15 +27,15 @@
 
 ### When to Use What?
 
-| Scenario                           | Best Tool                   |
-| ---------------------------------- | --------------------------- |
-| Building a new app from scratch    | Claude (claude.ai)          |
-| Generating a full-stack app fast   | Bolt.new                    |
-| Editing existing code              | **Cursor / Windsurf**       |
-| Fixing a bug in existing code      | **Cursor / Windsurf**       |
-| Adding a feature to existing code  | **Cursor / Windsurf**       |
-| Understanding unfamiliar code      | **Cursor / Windsurf**       |
-| Quick UI prototyping               | v0.dev                      |
+| Scenario                          | Best Tool             |
+| --------------------------------- | --------------------- |
+| Building a new app from scratch   | Claude (claude.ai)    |
+| Generating a full-stack app fast  | Bolt.new              |
+| Editing existing code             | **Cursor / Windsurf** |
+| Fixing a bug in existing code     | **Cursor / Windsurf** |
+| Adding a feature to existing code | **Cursor / Windsurf** |
+| Understanding unfamiliar code     | **Cursor / Windsurf** |
+| Quick UI prototyping              | v0.dev                |
 
 ### What Is Cursor?
 
@@ -61,19 +61,22 @@ Cursor is VS Code (the world's most popular code editor) with AI built in:
 Select any section of code in your HTML file and try these:
 
 **Ask a question (Cmd+L to open chat):**
+
 ```
-What does this file do? Give me a high-level overview of the main functions 
+What does this file do? Give me a high-level overview of the main functions
 and how they interact.
 ```
 
 **Explain a function:**
+
 ```
 Explain what the renderDashboard() function does in simple terms.
 ```
 
 **Find a bug:**
+
 ```
-I click the "Add Supplier" button and nothing happens. 
+I click the "Add Supplier" button and nothing happens.
 What could be wrong? Look at the event listener and the form handling code.
 ```
 
@@ -122,7 +125,7 @@ Cursor will show you all the changes it wants to make. Review and accept.
 ### Step 5 – Git Basics: Don't Lose Your Work
 
 !!! danger "Golden Rule"
-    
+
     **Always commit before making big changes.** If something goes wrong, you can revert.
 
 **Essential Git commands in Cursor's terminal:**
@@ -158,18 +161,18 @@ git log --oneline
 
 ### Step 6 – Cursor vs. Windsurf
 
-| Feature           | Cursor              | Windsurf            |
-| ----------------- | ------------------- | ------------------- |
-| Base editor       | VS Code fork        | VS Code fork        |
-| AI chat           | ✅ Excellent        | ✅ Good             |
-| Agent mode        | ✅ Strong           | ✅ Strong           |
-| Free tier         | Limited             | More generous       |
-| Speed             | Fast                | Fast                |
-| Unique feature    | Multi-file editing  | "Cascade" agent     |
+| Feature        | Cursor             | Windsurf        |
+| -------------- | ------------------ | --------------- |
+| Base editor    | VS Code fork       | VS Code fork    |
+| AI chat        | ✅ Excellent       | ✅ Good         |
+| Agent mode     | ✅ Strong          | ✅ Strong       |
+| Free tier      | Limited            | More generous   |
+| Speed          | Fast               | Fast            |
+| Unique feature | Multi-file editing | "Cascade" agent |
 
 !!! tip "Try Both"
-    
-    Download both and use whichever feels more comfortable. 
+
+    Download both and use whichever feels more comfortable.
     They're similar enough that skills transfer between them.
 
 ---
@@ -178,9 +181,9 @@ git log --oneline
 
 1. Open your Import Management app in Cursor
 2. Use AI to add **three new features**:
-    - A notification badge for overdue orders
-    - Keyboard shortcuts (e.g., `N` for new order, `/` for search)
-    - A print-friendly stylesheet
+   - A notification badge for overdue orders
+   - Keyboard shortcuts (e.g., `N` for new order, `/` for search)
+   - A print-friendly stylesheet
 3. Commit each change separately with a descriptive message
 4. Push to GitHub
 

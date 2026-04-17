@@ -37,13 +37,13 @@ hide:
 
 ## Accounts You'll Need
 
-| Service    | URL                          | What For                          |
-| ---------- | ---------------------------- | --------------------------------- |
-| Claude     | https://claude.ai            | AI assistant for building apps    |
-| GitHub     | https://github.com           | Version control and code storage  |
-| Supabase   | https://supabase.com         | Database for your apps            |
-| n8n Cloud  | https://n8n.io               | Workflow automation               |
-| Vercel     | https://vercel.com           | Free hosting for web apps         |
-| Cursor     | https://cursor.com           | AI-powered code editor            |
+| Service   | URL                  | What For                         |
+| --------- | -------------------- | -------------------------------- |
+| Claude    | https://claude.ai    | AI assistant for building apps   |
+| GitHub    | https://github.com   | Version control and code storage |
+| Supabase  | https://supabase.com | Database for your apps           |
+| n8n Cloud | https://n8n.io       | Workflow automation              |
+| Vercel    | https://vercel.com   | Free hosting for web apps        |
+| Cursor    | https://cursor.com   | AI-powered code editor           |
 
 ---

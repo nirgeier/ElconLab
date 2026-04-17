@@ -29,14 +29,14 @@
 
 Elcon currently uses several disconnected systems:
 
-| System         | Purpose                    | Limitation                           |
-| -------------- | -------------------------- | ------------------------------------ |
-| Hashavshevet   | ERP (accounting, invoices) | Outdated, hard to extend             |
-| Wiznet CRM     | Customer management        | Standalone, no integration           |
-| Monday.com     | Task management            | Expensive for what we use            |
-| Smadar         | Delivery note scanning     | Limited, single-purpose              |
-| Excel          | Everything else            | Manual, error-prone, no automation   |
-| File Server    | Drawing management         | Folder-based, no search, no metadata |
+| System       | Purpose                    | Limitation                           |
+| ------------ | -------------------------- | ------------------------------------ |
+| Hashavshevet | ERP (accounting, invoices) | Outdated, hard to extend             |
+| Wiznet CRM   | Customer management        | Standalone, no integration           |
+| Monday.com   | Task management            | Expensive for what we use            |
+| Smadar       | Delivery note scanning     | Limited, single-purpose              |
+| Excel        | Everything else            | Manual, error-prone, no automation   |
+| File Server  | Drawing management         | Folder-based, no search, no metadata |
 
 ### What AI Can Do For Us
 
@@ -57,23 +57,23 @@ graph TB
         Bolt["Bolt.new"]
         V0["v0.dev"]
     end
-    
+
     subgraph "Infrastructure"
         Supabase["Supabase (Database)"]
         Vercel["Vercel (Hosting)"]
         GitHub["GitHub (Version Control)"]
     end
-    
+
     subgraph "Automation"
         n8n["n8n (Workflows)"]
     end
-    
+
     subgraph "Existing Systems"
         ERP["Hashavshevet ERP"]
         CRM["Wiznet CRM"]
         Monday["Monday.com"]
     end
-    
+
     Claude --> |"Generates code"| Supabase
     Claude --> |"Generates code"| Vercel
     Cursor --> |"Edits code"| GitHub
@@ -91,15 +91,15 @@ graph TB
 
 Read through the following definitions. These terms will come up throughout the course:
 
-| Term              | Definition                                                                                   |
-| ----------------- | -------------------------------------------------------------------------------------------- |
-| **LLM**           | Large Language Model – an AI trained on text that can generate code, text, and reasoning      |
-| **Prompt**        | The text you send to an AI to get a response                                                  |
-| **Context Window**| The maximum amount of text an AI can "see" at once (e.g., 200K tokens for Claude)            |
-| **Token**         | A chunk of text (~4 characters). AI models read and generate in tokens                        |
-| **Artifact**      | A self-contained output from Claude (code, document, diagram) you can preview and edit        |
-| **Workflow**      | An automated sequence of steps in n8n that connects triggers to actions                       |
-| **API**           | Application Programming Interface – how software systems talk to each other                   |
+| Term               | Definition                                                                               |
+| ------------------ | ---------------------------------------------------------------------------------------- |
+| **LLM**            | Large Language Model – an AI trained on text that can generate code, text, and reasoning |
+| **Prompt**         | The text you send to an AI to get a response                                             |
+| **Context Window** | The maximum amount of text an AI can "see" at once (e.g., 200K tokens for Claude)        |
+| **Token**          | A chunk of text (~4 characters). AI models read and generate in tokens                   |
+| **Artifact**       | A self-contained output from Claude (code, document, diagram) you can preview and edit   |
+| **Workflow**       | An automated sequence of steps in n8n that connects triggers to actions                  |
+| **API**            | Application Programming Interface – how software systems talk to each other              |
 
 ### Step 2 – Set Up Your Accounts
 
@@ -119,19 +119,19 @@ Create accounts on each of the following platforms:
 1. Open Claude at [claude.ai](https://claude.ai)
 2. Type the following prompt:
 
-    ```
-    I work at a company called Elcon that manufactures instrumentation and control equipment. 
-    We have 200 suppliers and manage all purchase orders in Excel spreadsheets.
-    
-    What kind of web application would you build to replace this Excel-based process? 
-    Give me a high-level description with the main features.
-    ```
+   ```
+   I work at a company called Elcon that manufactures instrumentation and control equipment.
+   We have 200 suppliers and manage all purchase orders in Excel spreadsheets.
+
+   What kind of web application would you build to replace this Excel-based process?
+   Give me a high-level description with the main features.
+   ```
 
 3. Read Claude's response carefully
 4. Ask a follow-up question to refine the answer
 
 !!! success "What to Notice"
-    
+
     - Claude understands business context, not just code
     - The more specific your description, the better the output
     - You can iterate and refine through conversation

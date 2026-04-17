@@ -29,13 +29,13 @@ The difference between a mediocre AI output and an excellent one is almost alway
 
 ### The RCTCO Framework
 
-| Component       | What It Does                                         | Example                                                    |
-| --------------- | ---------------------------------------------------- | ---------------------------------------------------------- |
-| **R**ole        | Tell the AI who it should be                         | "You are a senior full-stack developer"                    |
-| **C**ontext     | Provide background about your company/problem        | "Elcon has 200 suppliers, orders managed in Excel..."      |
-| **T**ask        | What exactly should the AI produce                   | "Build a web app for managing purchase orders"             |
-| **C**onstraints | Limitations and requirements                         | "Must work offline, use Hebrew interface, simple to use"   |
-| **O**utput      | What format do you want                              | "Generate a single HTML file with embedded CSS and JS"     |
+| Component       | What It Does                                  | Example                                                  |
+| --------------- | --------------------------------------------- | -------------------------------------------------------- |
+| **R**ole        | Tell the AI who it should be                  | "You are a senior full-stack developer"                  |
+| **C**ontext     | Provide background about your company/problem | "Elcon has 200 suppliers, orders managed in Excel..."    |
+| **T**ask        | What exactly should the AI produce            | "Build a web app for managing purchase orders"           |
+| **C**onstraints | Limitations and requirements                  | "Must work offline, use Hebrew interface, simple to use" |
+| **O**utput      | What format do you want                       | "Generate a single HTML file with embedded CSS and JS"   |
 
 ---
 
@@ -54,10 +54,10 @@ Now try this **good prompt**:
 ```
 Role: You are a senior full-stack developer building internal business tools.
 
-Context: I work at Elcon, an instrumentation and control company in Israel. 
-We have 200 active suppliers. Every week, our procurement team creates purchase 
-orders in Excel. Each order has: supplier name, part number, description, 
-quantity, unit price, total price, expected delivery date, and status 
+Context: I work at Elcon, an instrumentation and control company in Israel.
+We have 200 active suppliers. Every week, our procurement team creates purchase
+orders in Excel. Each order has: supplier name, part number, description,
+quantity, unit price, total price, expected delivery date, and status
 (draft / sent / confirmed / received).
 
 Task: Build a web-based Purchase Order Management system with the following features:
@@ -78,7 +78,7 @@ Output: Generate the complete HTML file with all CSS and JavaScript embedded.
 ```
 
 !!! success "Compare the Results"
-    
+
     Notice how the structured prompt produces a dramatically better, more complete, and more relevant application.
 
 ### Step 2 – Iterative Development
@@ -86,12 +86,14 @@ Output: Generate the complete HTML file with all CSS and JavaScript embedded.
 Start with a minimal prompt and build up through conversation:
 
 **Round 1 – Core functionality:**
+
 ```
-Build a simple supplier management table. I need: supplier name, contact person, 
+Build a simple supplier management table. I need: supplier name, contact person,
 email, phone, and category. Use a single HTML file with LocalStorage.
 ```
 
 **Round 2 – Add features:**
+
 ```
 Great! Now add:
 - A search/filter bar at the top
@@ -100,6 +102,7 @@ Great! Now add:
 ```
 
 **Round 3 – Polish:**
+
 ```
 Now add:
 - Import from CSV functionality
@@ -108,8 +111,8 @@ Now add:
 ```
 
 !!! tip "The Power of Iteration"
-    
-    Building in rounds is often faster than trying to describe everything at once. 
+
+    Building in rounds is often faster than trying to describe everything at once.
     Each round gives you a working version you can test and refine.
 
 ### Step 3 – Common Prompt Patterns for Business Apps
@@ -154,7 +157,7 @@ Choose one of these real Elcon use cases and build it with Claude:
 3. **Delivery Note Scanner Interface** – Upload an image, display extracted data, match to a PO
 
 !!! note "Workshop Instructions"
-    
+
     1. Write your prompt using the RCTCO framework
     2. Submit to Claude and review the output
     3. Iterate at least 3 times to add features and fix issues
@@ -165,13 +168,13 @@ Choose one of these real Elcon use cases and build it with Claude:
 
 ## Common Mistakes to Avoid
 
-| Mistake                          | Why It's Bad                              | Fix                                     |
-| -------------------------------- | ----------------------------------------- | ---------------------------------------- |
-| Too vague                        | AI guesses and gets it wrong              | Be specific about fields, features, UI   |
-| Too much at once                 | AI gets confused, misses things           | Build in rounds                          |
-| No context                       | AI doesn't know your business             | Always explain your company and use case |
-| No constraints                   | AI picks random tech stack                | Specify: single file, no framework, etc. |
-| Not testing between iterations   | Errors compound                           | Test each round before adding features   |
+| Mistake                        | Why It's Bad                    | Fix                                      |
+| ------------------------------ | ------------------------------- | ---------------------------------------- |
+| Too vague                      | AI guesses and gets it wrong    | Be specific about fields, features, UI   |
+| Too much at once               | AI gets confused, misses things | Build in rounds                          |
+| No context                     | AI doesn't know your business   | Always explain your company and use case |
+| No constraints                 | AI picks random tech stack      | Specify: single file, no framework, etc. |
+| Not testing between iterations | Errors compound                 | Test each round before adding features   |
 
 ---
 

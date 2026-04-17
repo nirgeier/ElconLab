@@ -25,21 +25,21 @@ vercel.json            # Vercel deployment config
 
 ## Labs
 
-| # | Lab | Topic |
-|---|-----|-------|
-| 001 | AI Landscape & Setup | LLMs, tools overview, account setup |
-| 002 | Prompt Engineering | Effective prompts for business systems |
-| 003 | Building Apps with Claude | From idea to working prototype |
-| 004 | Database Fundamentals | Supabase, PostgreSQL, connecting apps |
-| 005 | Hosting & Deployment | Vercel, self-hosted, going live |
-| 006 | ERP Integration | Hashavshevet connection, read-only access |
-| 007 | n8n Basics | Visual workflow automation |
-| 008 | n8n Advanced Workflows | Real Elcon automations |
-| 009 | n8n + AI | AI nodes, document processing |
-| 010 | Cursor & Windsurf | AI code editors for maintenance |
-| 011 | System Architecture | Designing Elcon's target stack |
-| 012 | Security & Best Practices | Auth, backups, safe patterns |
-| 013 | Building Your Roadmap | Prioritization, ownership, next steps |
+| #   | Lab                       | Topic                                     |
+| --- | ------------------------- | ----------------------------------------- |
+| 001 | AI Landscape & Setup      | LLMs, tools overview, account setup       |
+| 002 | Prompt Engineering        | Effective prompts for business systems    |
+| 003 | Building Apps with Claude | From idea to working prototype            |
+| 004 | Database Fundamentals     | Supabase, PostgreSQL, connecting apps     |
+| 005 | Hosting & Deployment      | Vercel, self-hosted, going live           |
+| 006 | ERP Integration           | Hashavshevet connection, read-only access |
+| 007 | n8n Basics                | Visual workflow automation                |
+| 008 | n8n Advanced Workflows    | Real Elcon automations                    |
+| 009 | n8n + AI                  | AI nodes, document processing             |
+| 010 | Cursor & Windsurf         | AI code editors for maintenance           |
+| 011 | System Architecture       | Designing Elcon's target stack            |
+| 012 | Security & Best Practices | Auth, backups, safe patterns              |
+| 013 | Building Your Roadmap     | Prioritization, ownership, next steps     |
 
 ## Deployment
 
