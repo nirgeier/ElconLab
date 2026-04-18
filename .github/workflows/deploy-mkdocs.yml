@@ -16,12 +16,10 @@
 
 name: Deploy GitHub Pages
 
-# Event triggers for the workflow
+# DISABLED: Use 'vercel --prod' manually for deployment
 on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
+  workflow_dispatch: null
+  # Automatic push trigger disabled
 
 # Workflow permissions
 permissions:
