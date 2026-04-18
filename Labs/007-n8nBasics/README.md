@@ -65,8 +65,8 @@ graph LR
 
 **Option A - n8n Cloud (recommended for this lab):**
 
-1. Go to [n8n.io](https://n8n.io) and sign in
-2. You'll land on the workflow editor
+- Go to [n8n.io](https://n8n.io) and sign in
+- You'll land on the workflow editor
 
 **Option B - Self-hosted (for production):**
 
@@ -87,7 +87,6 @@ Build a workflow that checks for overdue purchase orders every morning:
 
 1. **Add a Schedule Trigger** - Click the `+` button and search for "Schedule"
    - Set to run every day at 8:00 AM
-
 2. **Add a Supabase Node** - Search for "Supabase" or use "HTTP Request"
    - Method: GET
    - URL: `https://YOUR_PROJECT.supabase.co/rest/v1/purchase_orders`
@@ -95,25 +94,26 @@ Build a workflow that checks for overdue purchase orders every morning:
      - `apikey`: your anon key
      - `Authorization`: `Bearer your_anon_key`
    - Query: `?status=neq.Received&status=neq.Cancelled&expected_delivery=lt.2026-04-17`
-
 3. **Add an IF Node** - Check if there are any results
    - Condition: `{{ $json.length > 0 }}`
-
 4. **Add an Email Node** - Send notification if overdue orders exist
    - To: procurement@elcon.co.il
    - Subject: `⚠️ {{ $json.length }} Overdue Purchase Orders`
    - Body: List the overdue POs
-
 5. **Test the workflow** - Click "Execute Workflow"
 
 ## Step 3 - Understanding Data Flow
 
 In n8n, each node receives data from the previous node and passes data to the next:
 
-```
-Schedule Trigger     →    HTTP Request      →    IF Node       →    Email
-(no data)                 (returns array        (checks if        (sends to
-                          of overdue POs)        array > 0)        team)
+```mermaid
+graph LR
+    T["Schedule Trigger<br/>(no data)"] --> HR["HTTP Request<br/>(returns array<br/>of overdue POs)"]
+    HR --> IF["IF Node<br/>(checks if<br/>array > 0)"]
+    IF --> E["Email<br/>(sends to<br/>team)"]
+    
+    style T fill:#e1f5fe
+    style E fill:#e8f5e9
 ```
 
 !!! tip "Debugging Data Flow"
@@ -133,8 +133,14 @@ Build a workflow that receives data from external systems via webhook:
 2. **Function Node** - Transform the incoming data
 3. **Supabase/HTTP Node** - Save to database
 
-```
-External System → Webhook URL → Transform Data → Save to Supabase
+```mermaid
+graph LR
+    ES["External System"] --> WH["Webhook URL<br/>(listens)"]
+    WH --> FN["Function Node<br/>(transform)"]
+    FN --> SB["Supabase/HTTP<br/>(save)"]
+    
+    style ES fill:#fff3e0
+    style SB fill:#e8f5e9
 ```
 
 This pattern is useful for:
@@ -147,20 +153,36 @@ This pattern is useful for:
 
 #### Pattern: Read → Transform → Write
 
-```
-Database Query → Code Node (transform) → Write to Another Table
+```mermaid
+graph LR
+    DB["Database<br/>Query"] --> CN["Code Node<br/>(transform)"]
+    CN --> WT["Write to<br/>Another Table"]
+    
+    style DB fill:#e3f2fd
+    style WT fill:#c8e6c9
 ```
 
 #### Pattern: Schedule → Check → Notify
 
-```
-Schedule (daily) → Query Database → IF (condition) → Email/Slack
+```mermaid
+graph LR
+    SCH["Schedule<br/>(daily)"] --> QDB["Query<br/>Database"]
+    QDB --> IF["IF<br/>(condition)"]
+    IF --> NOT["Email/Slack<br/>(notify)"]
+    
+    style SCH fill:#e1f5fe
+    style NOT fill:#f8bbd0
 ```
 
 #### Pattern: Webhook → Process → Respond
 
-```
-Webhook (receives data) → Process → HTTP Response (reply back)
+```mermaid
+graph LR
+    WH["Webhook<br/>(receives data)"] --> PR["Process"]
+    PR --> HR["HTTP Response<br/>(reply back)"]
+    
+    style WH fill:#fff9c4
+    style HR fill:#c8e6c9
 ```
 
 ---
