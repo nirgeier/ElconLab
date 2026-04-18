@@ -1,4 +1,4 @@
-# Lab 006 – ERP Integration (Hashavshevet)
+# Lab 006 - ERP Integration (Hashavshevet)
 
 !!! hint "Overview"
 
@@ -25,14 +25,14 @@
 
 ## Background
 
-### The Dream
+## The Dream
 
 > "My dream is to give access to these systems to my server where the ERP database sits,
 > and then I could do beautiful things."
 
 This is achievable with the right architecture.
 
-### The Architecture
+## The Architecture
 
 ```
 Hashavshevet          Middleware              Frontend
@@ -63,7 +63,7 @@ Hashavshevet          Middleware              Frontend
 
 ## Lab Steps
 
-### Step 1 – Understand the Hashavshevet Database
+## Step 1 - Understand the Hashavshevet Database
 
 Hashavshevet uses Microsoft SQL Server. Common tables you might want to access:
 
@@ -81,7 +81,7 @@ Hashavshevet uses Microsoft SQL Server. Common tables you might want to access:
     The exact table names and structure depend on your Hashavshevet version
     and configuration. Always verify with your accountant or IT team.
 
-### Step 2 – Set Up a Read-Only User (Conceptual)
+## Step 2 - Set Up a Read-Only User (Conceptual)
 
 When connecting to the real ERP, you'll need a dedicated read-only user:
 
@@ -109,7 +109,7 @@ GROUP BY YEAR(InvoiceDate), MONTH(InvoiceDate);
 GRANT SELECT ON dbo.vw_MonthlyRevenue TO elcon_readonly;
 ```
 
-### Step 3 – Build a Simulated ERP Dashboard
+## Step 3 - Build a Simulated ERP Dashboard
 
 Since we can't connect to the real ERP in class, we'll simulate the data in Supabase:
 
@@ -159,7 +159,7 @@ Supabase URL: [your-url]
 Supabase Anon Key: [your-key]
 ```
 
-### Step 4 – The n8n Middleware Approach
+## Step 4 - The n8n Middleware Approach
 
 In production, n8n will serve as the middleware between the ERP and your apps:
 

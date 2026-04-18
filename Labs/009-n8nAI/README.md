@@ -1,4 +1,4 @@
-# Lab 009 – n8n + AI: Intelligent Automation
+# Lab 009 - n8n + AI: Intelligent Automation
 
 !!! hint "Overview"
 
@@ -25,7 +25,7 @@
 
 ## Background
 
-### AI + Automation = Superpowers
+## AI + Automation = Superpowers
 
 | Traditional Automation             | AI-Powered Automation                   |
 | ---------------------------------- | --------------------------------------- |
@@ -38,14 +38,14 @@
 
 ## Lab Steps
 
-### Step 1 – Set Up AI Credentials in n8n
+## Step 1 - Set Up AI Credentials in n8n
 
 1. In n8n, go to **Credentials** → **Add Credential**
 2. Search for "Anthropic" (Claude) or "OpenAI"
 3. Enter your API key
 4. Test the connection
 
-### Step 2 – Email Classification and Routing
+## Step 2 - Email Classification and Routing
 
 Build a workflow that automatically classifies incoming emails:
 
@@ -82,7 +82,7 @@ Email body: {{ $json.body }}
 Respond in JSON format only.
 ```
 
-### Step 3 – Supplier Price List Extraction
+## Step 3 - Supplier Price List Extraction
 
 Build a workflow that extracts data from supplier price list PDFs:
 
@@ -92,8 +92,8 @@ Receive PDF → AI extracts structured data → Compare with existing prices →
 
 **Implementation:**
 
-1. **Webhook** – Receives the PDF file
-2. **AI Node (Claude)** – Send the PDF content with this prompt:
+1. **Webhook** - Receives the PDF file
+2. **AI Node (Claude)** - Send the PDF content with this prompt:
 
    ```
    Extract all items from this supplier price list.
@@ -108,12 +108,12 @@ Receive PDF → AI extracts structured data → Compare with existing prices →
    Return as a JSON array.
    ```
 
-3. **Code Node** – Compare extracted prices with existing database prices
-4. **IF Node** – Check if any prices changed
-5. **Supabase Node** – Update changed prices
-6. **Email Node** – Notify procurement of price changes
+3. **Code Node** - Compare extracted prices with existing database prices
+4. **IF Node** - Check if any prices changed
+5. **Supabase Node** - Update changed prices
+6. **Email Node** - Notify procurement of price changes
 
-### Step 4 – AI-Generated Weekly Reports
+## Step 4 - AI-Generated Weekly Reports
 
 Build a workflow that generates management reports using AI:
 
@@ -150,7 +150,7 @@ Format the report with:
 Use professional, concise language.
 ```
 
-### Step 5 – Intelligent Document Processing Pipeline
+## Step 5 - Intelligent Document Processing Pipeline
 
 Combine everything into a complete document processing system:
 
@@ -178,12 +178,12 @@ graph TD
 
 !!! warning "Important Guidelines"
 
-    1. **Always validate AI outputs** – AI can hallucinate. Add validation nodes after AI processing.
-    2. **Use structured output formats** – Ask for JSON, not free text, when you need to process the result.
-    3. **Set temperature to 0** – For data extraction tasks, use temperature=0 for consistent results.
-    4. **Handle failures gracefully** – AI calls can fail. Always add error handling.
-    5. **Monitor costs** – Each AI API call costs money. Monitor your usage.
-    6. **Keep prompts in a central place** – Store prompts in a database or file so they're easy to update.
+    1. **Always validate AI outputs** - AI can hallucinate. Add validation nodes after AI processing.
+    2. **Use structured output formats** - Ask for JSON, not free text, when you need to process the result.
+    3. **Set temperature to 0** - For data extraction tasks, use temperature=0 for consistent results.
+    4. **Handle failures gracefully** - AI calls can fail. Always add error handling.
+    5. **Monitor costs** - Each AI API call costs money. Monitor your usage.
+    6. **Keep prompts in a central place** - Store prompts in a database or file so they're easy to update.
 
 ---
 

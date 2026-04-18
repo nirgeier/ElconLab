@@ -1,4 +1,4 @@
-# Lab 013 – Building Your Roadmap
+# Lab 013 - Building Your Roadmap
 
 !!! hint "Overview"
 
@@ -24,7 +24,7 @@
 
 ## Lab Steps
 
-### Step 1 – Evaluate Current Systems
+## Step 1 - Evaluate Current Systems
 
 For each current system, evaluate the pain level and replacement feasibility:
 
@@ -37,7 +37,7 @@ For each current system, evaluate the pain level and replacement feasibility:
 | Wiznet CRM       | 🟢 Low     | 🔴 Hard            | Better integration         | Low       |
 | Hashavshevet ERP | 🔴 High    | 🔴 Very Hard       | Better visibility          | Long-term |
 
-### Step 2 – Define the Phases
+## Step 2 - Define the Phases
 
 #### Phase 1: Quick Wins (Month 1-2)
 
@@ -98,7 +98,7 @@ For each current system, evaluate the pain level and replacement feasibility:
        - Central dashboard for management
        - Automated end-to-end processes
 
-### Step 3 – Assign Ownership
+## Step 3 - Assign Ownership
 
 For each system, assign clear ownership:
 
@@ -113,11 +113,11 @@ For each system, assign clear ownership:
 !!! tip "Ownership Rules"
 
     1. Every system must have **one owner** (not a committee)
-    2. The owner doesn't do everything – they make sure it gets done
+    2. The owner doesn't do everything - they make sure it gets done
     3. The builder and maintainer can be different people
     4. Schedule monthly reviews for each system
 
-### Step 4 – Continued Learning Resources
+## Step 4 - Continued Learning Resources
 
 #### YouTube Channels
 
@@ -144,15 +144,15 @@ For each system, assign clear ownership:
 - **Monthly**: Review and update your roadmap
 - **Quarterly**: Evaluate new tools and approaches
 
-### Step 5 – Final Presentations
+## Step 5 - Final Presentations
 
 Each team presents:
 
-1. **The Problem** – What manual process did you target?
-2. **The Solution** – Demo your working prototype
-3. **The Architecture** – How does it fit into Elcon's systems?
-4. **Next Steps** – What would you add in the next iteration?
-5. **Lessons Learned** – What worked, what didn't, what surprised you?
+1. **The Problem** - What manual process did you target?
+2. **The Solution** - Demo your working prototype
+3. **The Architecture** - How does it fit into Elcon's systems?
+4. **Next Steps** - What would you add in the next iteration?
+5. **Lessons Learned** - What worked, what didn't, what surprised you?
 
 ---
 

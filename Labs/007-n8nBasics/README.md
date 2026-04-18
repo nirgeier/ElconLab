@@ -1,8 +1,8 @@
-# Lab 007 – n8n Basics: Visual Workflow Automation
+# Lab 007 - n8n Basics: Visual Workflow Automation
 
 !!! hint "Overview"
 
-    - In this lab, you will learn the fundamentals of n8n – a visual workflow automation platform.
+    - In this lab, you will learn the fundamentals of n8n - a visual workflow automation platform.
     - You will understand nodes, triggers, connections, and how data flows through a workflow.
     - You will build your first automated workflow from scratch.
     - By the end of this lab, you will understand how n8n can serve as the "glue" between all of Elcon's systems.
@@ -24,7 +24,7 @@
 
 ## Background
 
-### Why n8n?
+## Why n8n?
 
 | Feature              | n8n                        | Zapier            | Make (Integromat) |
 | -------------------- | -------------------------- | ----------------- | ----------------- |
@@ -36,7 +36,7 @@
 | Code nodes           | ✅ JavaScript & Python     | ❌ No             | ⚠️ Limited        |
 | Price                | Free (self-hosted)         | $20-600/mo        | $10-300/mo        |
 
-### Core Concepts
+## Core Concepts
 
 ```mermaid
 graph LR
@@ -61,14 +61,14 @@ graph LR
 
 ## Lab Steps
 
-### Step 1 – Access n8n
+## Step 1 - Access n8n
 
-**Option A – n8n Cloud (recommended for this lab):**
+**Option A - n8n Cloud (recommended for this lab):**
 
 1. Go to [n8n.io](https://n8n.io) and sign in
 2. You'll land on the workflow editor
 
-**Option B – Self-hosted (for production):**
+**Option B - Self-hosted (for production):**
 
 ```bash
 # Docker one-liner to run n8n locally
@@ -81,14 +81,14 @@ docker run -it --rm \
 
 Access at `http://localhost:5678`
 
-### Step 2 – Your First Workflow: Scheduled Data Check
+## Step 2 - Your First Workflow: Scheduled Data Check
 
 Build a workflow that checks for overdue purchase orders every morning:
 
-1. **Add a Schedule Trigger** – Click the `+` button and search for "Schedule"
+1. **Add a Schedule Trigger** - Click the `+` button and search for "Schedule"
    - Set to run every day at 8:00 AM
 
-2. **Add a Supabase Node** – Search for "Supabase" or use "HTTP Request"
+2. **Add a Supabase Node** - Search for "Supabase" or use "HTTP Request"
    - Method: GET
    - URL: `https://YOUR_PROJECT.supabase.co/rest/v1/purchase_orders`
    - Headers:
@@ -96,17 +96,17 @@ Build a workflow that checks for overdue purchase orders every morning:
      - `Authorization`: `Bearer your_anon_key`
    - Query: `?status=neq.Received&status=neq.Cancelled&expected_delivery=lt.2026-04-17`
 
-3. **Add an IF Node** – Check if there are any results
+3. **Add an IF Node** - Check if there are any results
    - Condition: `{{ $json.length > 0 }}`
 
-4. **Add an Email Node** – Send notification if overdue orders exist
+4. **Add an Email Node** - Send notification if overdue orders exist
    - To: procurement@elcon.co.il
    - Subject: `⚠️ {{ $json.length }} Overdue Purchase Orders`
    - Body: List the overdue POs
 
-5. **Test the workflow** – Click "Execute Workflow"
+5. **Test the workflow** - Click "Execute Workflow"
 
-### Step 3 – Understanding Data Flow
+## Step 3 - Understanding Data Flow
 
 In n8n, each node receives data from the previous node and passes data to the next:
 
@@ -125,13 +125,13 @@ Schedule Trigger     →    HTTP Request      →    IF Node       →    Email
 
     This is the most powerful debugging tool in n8n.
 
-### Step 4 – Webhook Workflow
+## Step 4 - Webhook Workflow
 
 Build a workflow that receives data from external systems via webhook:
 
-1. **Webhook Trigger** – Creates a URL that listens for incoming requests
-2. **Function Node** – Transform the incoming data
-3. **Supabase/HTTP Node** – Save to database
+1. **Webhook Trigger** - Creates a URL that listens for incoming requests
+2. **Function Node** - Transform the incoming data
+3. **Supabase/HTTP Node** - Save to database
 
 ```
 External System → Webhook URL → Transform Data → Save to Supabase
@@ -143,7 +143,7 @@ This pattern is useful for:
 - Accepting form submissions
 - Integrating with any system that can send HTTP requests
 
-### Step 5 – Common n8n Patterns
+## Step 5 - Common n8n Patterns
 
 #### Pattern: Read → Transform → Write
 

@@ -1,4 +1,4 @@
-# Lab 012 – Security & Best Practices
+# Lab 012 - Security & Best Practices
 
 !!! hint "Overview"
 
@@ -25,7 +25,7 @@
 
 ## Background
 
-### The Security Mindset
+## The Security Mindset
 
 !!! danger "Common Misconception"
 
@@ -35,7 +35,7 @@
     supplier pricing, customer information, financial data.
     One compromised tool can expose your entire business.
 
-### Security Layers
+## Security Layers
 
 ```
 ┌─────────────────────────────────────┐
@@ -60,7 +60,7 @@
 
 ## Lab Steps
 
-### Step 1 – Add Authentication with Supabase Auth
+## Step 1 - Add Authentication with Supabase Auth
 
 **Enable email authentication in Supabase:**
 
@@ -68,7 +68,7 @@
 2. Email is enabled by default
 3. Optionally enable Google login for convenience
 
-**Add login to your app – ask Claude:**
+**Add login to your app - ask Claude:**
 
 ```
 Add a login page to my app using Supabase Auth. Requirements:
@@ -85,7 +85,7 @@ Supabase Anon Key: [your-key]
 Use the Supabase JavaScript client for authentication.
 ```
 
-### Step 2 – Role-Based Access Control
+## Step 2 - Role-Based Access Control
 
 Not everyone should have the same access. Create a roles system:
 
@@ -127,7 +127,7 @@ CREATE TRIGGER on_auth_user_created
 | Manage users   | ✅    | ❌     | ❌     |
 | Export data    | ✅    | ✅     | ❌     |
 
-### Step 3 – Row Level Security (RLS)
+## Step 3 - Row Level Security (RLS)
 
 Supabase RLS ensures that even if someone bypasses your app, the database itself enforces access rules:
 
@@ -163,7 +163,7 @@ CREATE POLICY "Admins can delete orders" ON purchase_orders
     );
 ```
 
-### Step 4 – Backup Strategy
+## Step 4 - Backup Strategy
 
 !!! warning "The 3-2-1 Backup Rule"
 
@@ -188,7 +188,7 @@ Schedule (daily 2 AM) → Export Supabase tables → Save to cloud storage → V
 - GitHub stores your code offsite
 - You can always revert to any previous version
 
-### Step 5 – Security Checklist
+## Step 5 - Security Checklist
 
 Use this checklist for every app you deploy:
 

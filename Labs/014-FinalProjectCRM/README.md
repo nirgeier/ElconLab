@@ -1,4 +1,4 @@
-# Final Project – Building a CRM with Claude Code + n8n
+# Final Project - Building a CRM with Claude Code + n8n
 
 !!! hint "Overview"
 
@@ -6,7 +6,7 @@
     - The frontend and backend are built with **Claude Code** (Supabase + Next.js).
     - The automation layer is built with **n8n** (workflows, notifications, AI).
     - This is a real-world project that combines everything you learned in this course.
-    - Work through it step by step – each phase builds on the previous one.
+    - Work through it step by step - each phase builds on the previous one.
 
 ## Project Architecture
 
@@ -60,7 +60,7 @@ graph TB
 
 ## Phase 1: Database Design (Claude Code)
 
-### Database Schema
+## Database Schema
 
 Use Claude Code to generate the entire database:
 
@@ -83,7 +83,7 @@ Create views for common queries (pipeline summary, overdue activities).
 Generate seed data: 20 companies, 50 contacts, 30 deals, 100 activities."
 ```
 
-### Expected ER Diagram
+## Expected ER Diagram
 
 ```mermaid
 erDiagram
@@ -205,7 +205,7 @@ Add pagination, sorting, and filtering support.
 Return proper error responses with status codes."
 ```
 
-### Deal Pipeline Stages
+## Deal Pipeline Stages
 
 ```mermaid
 graph LR
@@ -252,7 +252,7 @@ Connect to Supabase for auth and data.
 Use React Query for data fetching."
 ```
 
-### Dashboard Wireframe
+## Dashboard Wireframe
 
 ```mermaid
 graph TD
@@ -296,7 +296,7 @@ graph TD
 
 ## Phase 4: n8n Automation Workflows
 
-### Workflow 1: Lead Capture
+## Workflow 1: Lead Capture
 
 ```mermaid
 graph LR
@@ -310,10 +310,10 @@ graph LR
 
 **n8n implementation:**
 
-1. **Webhook** – POST `/webhook/lead/capture`
-2. **Code** – Validate: name, email required; clean phone format
-3. **Supabase** – Insert to `contacts` table
-4. **HTTP Request** – Call Claude API:
+1. **Webhook** - POST `/webhook/lead/capture`
+2. **Code** - Validate: name, email required; clean phone format
+3. **Supabase** - Insert to `contacts` table
+4. **HTTP Request** - Call Claude API:
    ```
    Score this lead 1-100 based on:
    - Company size and industry match (Elcon targets industrial/manufacturing)
@@ -321,11 +321,11 @@ graph LR
    - Source quality (referral > website > cold)
    Return JSON: { score: number, reasoning: string }
    ```
-5. **Supabase** – Update `lead_score`
-6. **Send Email** – Templated welcome email
-7. **Supabase** – Create activity: "Follow up with new lead" due in 2 days
+5. **Supabase** - Update `lead_score`
+6. **Send Email** - Templated welcome email
+7. **Supabase** - Create activity: "Follow up with new lead" due in 2 days
 
-### Workflow 2: Follow-up Reminders
+## Workflow 2: Follow-up Reminders
 
 ```mermaid
 graph TD
@@ -338,7 +338,7 @@ graph TD
     C -->|No| H["Log: All clear"]
 ```
 
-### Workflow 3: AI Deal Analysis
+## Workflow 3: AI Deal Analysis
 
 ```mermaid
 graph LR
@@ -372,7 +372,7 @@ Assess:
 Return as JSON.
 ```
 
-### Workflow 4: Weekly CRM Report
+## Workflow 4: Weekly CRM Report
 
 ```mermaid
 sequenceDiagram
@@ -387,17 +387,17 @@ sequenceDiagram
     AI->>Email: Send report to management
 ```
 
-### Workflow 5: Data Enrichment
+## Workflow 5: Data Enrichment
 
 Automatically enrich new companies:
 
-1. **Trigger** – New company created
-2. **HTTP Request** – Look up company info (website scraping or API)
-3. **AI** – Extract: industry, size, key products, relevant contacts
-4. **Supabase** – Update company record
-5. **Activity** – Create "Review enriched data" task
+1. **Trigger** - New company created
+2. **HTTP Request** - Look up company info (website scraping or API)
+3. **AI** - Extract: industry, size, key products, relevant contacts
+4. **Supabase** - Update company record
+5. **Activity** - Create "Review enriched data" task
 
-### Workflow 6: Email Tracking
+## Workflow 6: Email Tracking
 
 ```mermaid
 graph TD
@@ -413,7 +413,7 @@ graph TD
 
 ## Phase 5: Integration & Testing
 
-### Connect Frontend to n8n
+## Connect Frontend to n8n
 
 ```mermaid
 graph TB
@@ -442,7 +442,7 @@ graph TB
     FUNC --> DB
 ```
 
-### Testing Checklist
+## Testing Checklist
 
 | Test                    | How to Verify                                   |
 | ----------------------- | ----------------------------------------------- |
@@ -457,7 +457,7 @@ graph TB
 
 ## Phase 6: Deploy & Launch
 
-### Deployment Architecture
+## Deployment Architecture
 
 ```mermaid
 graph TB
@@ -478,12 +478,12 @@ graph TB
 
 **Deployment steps:**
 
-1. **Supabase** – Already hosted (apply migrations)
-2. **Vercel** – Connect GitHub repo, auto-deploy
-3. **n8n** – Deploy on Coolify with Docker Compose
-4. **DNS** – Set up custom domains
-5. **Monitoring** – n8n self-monitoring workflow
-6. **Backup** – Automated daily backups
+1. **Supabase** - Already hosted (apply migrations)
+2. **Vercel** - Connect GitHub repo, auto-deploy
+3. **n8n** - Deploy on Coolify with Docker Compose
+4. **DNS** - Set up custom domains
+5. **Monitoring** - n8n self-monitoring workflow
+6. **Backup** - Automated daily backups
 
 ---
 

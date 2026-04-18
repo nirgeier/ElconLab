@@ -1,4 +1,4 @@
-# Elcon – AI-Powered Business Systems Training
+# Elcon - AI-Powered Business Systems Training
 
 Hands-on labs for Elcon employees to learn how to build, maintain, and extend internal business systems using AI tools (Claude, n8n, Cursor, Supabase, and more).
 

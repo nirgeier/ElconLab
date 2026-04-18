@@ -1,4 +1,4 @@
-# Lab 011 – System Architecture: Designing Elcon's Stack
+# Lab 011 - System Architecture: Designing Elcon's Stack
 
 !!! hint "Overview"
 
@@ -24,7 +24,7 @@
 
 ## Background
 
-### The Target Architecture
+## The Target Architecture
 
 ```mermaid
 graph TB
@@ -79,9 +79,9 @@ graph TB
 
 ## Lab Steps
 
-### Step 1 – Understanding Docker (Conceptual)
+## Step 1 - Understanding Docker (Conceptual)
 
-Docker puts each application in its own "container" – an isolated, portable package:
+Docker puts each application in its own "container" - an isolated, portable package:
 
 | Concept       | Analogy                                  | What It Means                          |
 | ------------- | ---------------------------------------- | -------------------------------------- |
@@ -98,7 +98,7 @@ Docker puts each application in its own "container" – an isolated, portable pa
 - Consistent environment (works the same everywhere)
 - All tools (n8n, Supabase, apps) can run as containers
 
-### Step 2 – Docker Compose for Elcon's Stack
+## Step 2 - Docker Compose for Elcon's Stack
 
 Here's what Elcon's complete stack looks like as Docker Compose:
 
@@ -178,7 +178,7 @@ volumes:
     You don't need to write Docker Compose files by hand.
     Ask Claude to generate them, or use Coolify which handles this automatically.
 
-### Step 3 – Self-Hosting with Coolify
+## Step 3 - Self-Hosting with Coolify
 
 [Coolify](https://coolify.io) is an open-source, self-hosted alternative to Vercel/Netlify/Heroku:
 
@@ -204,7 +204,7 @@ curl -fsSL https://cdn.coollabs.io/coolify/install.sh | bash
 3. Add your server as a resource
 4. Deploy services: PostgreSQL, n8n, your apps
 
-### Step 4 – Network Architecture
+## Step 4 - Network Architecture
 
 ```
                     INTERNET

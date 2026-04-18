@@ -1,4 +1,4 @@
-# Lab 003 – Building Applications with Claude
+# Lab 003 - Building Applications with Claude
 
 !!! hint "Overview"
 
@@ -25,11 +25,11 @@
 
 ## Background
 
-### The Import Management Success Story
+## The Import Management Success Story
 
-Elcon's procurement team manages 200+ suppliers with weekly purchase orders – all in Excel. In just 4 hours with Claude, a fully functional Import Management System was created. This lab recreates that process step-by-step so you understand every part.
+Elcon's procurement team manages 200+ suppliers with weekly purchase orders - all in Excel. In just 4 hours with Claude, a fully functional Import Management System was created. This lab recreates that process step-by-step so you understand every part.
 
-### What Does Claude Generate?
+## What Does Claude Generate?
 
 When you ask Claude to build a web app, it typically generates three types of code:
 
@@ -39,13 +39,13 @@ When you ask Claude to build a web app, it typically generates three types of co
 | **CSS**        | The styling and visual appearance     | The paint, furniture, decor     |
 | **JavaScript** | The behavior and interactivity        | The electrical system, plumbing |
 
-For simple internal tools, all three can live in a **single HTML file** – no server needed.
+For simple internal tools, all three can live in a **single HTML file** - no server needed.
 
 ---
 
 ## Lab Steps
 
-### Step 1 – Set Up a Claude Project
+## Step 1 - Set Up a Claude Project
 
 1. Go to [claude.ai](https://claude.ai)
 2. Click **Projects** in the left sidebar
@@ -68,7 +68,7 @@ For simple internal tools, all three can live in a **single HTML file** – no s
     Claude Projects remember your context across conversations. You don't need to
     re-explain who Elcon is every time you start a new chat.
 
-### Step 2 – Build the Import Management System
+## Step 2 - Build the Import Management System
 
 In your project, start a new conversation. Use this prompt:
 
@@ -102,11 +102,11 @@ Generate a single HTML file with all CSS and JavaScript embedded.
 Include realistic sample data for 10 suppliers and 20 purchase orders.
 ```
 
-### Step 3 – Test and Iterate
+## Step 3 - Test and Iterate
 
 1. Copy the generated HTML into a file called `import-management.html`
 2. Open it in your browser
-3. Test every feature – click buttons, add data, search, filter
+3. Test every feature - click buttons, add data, search, filter
 
 For each issue you find, go back to Claude and describe it:
 
@@ -119,7 +119,7 @@ The system works great! A few changes needed:
    Shipped=orange, Received=dark-green, Cancelled=red
 ```
 
-### Step 4 – Understand the Code Structure
+## Step 4 - Understand the Code Structure
 
 Ask Claude to explain the code:
 
@@ -138,16 +138,16 @@ Use a table format to list the main functions and what they do.
     - Be able to make simple text changes yourself (labels, colors)
     - Understand what's possible and what requires a different approach
 
-### Step 5 – Using Artifacts
+## Step 5 - Using Artifacts
 
-When Claude generates code, it appears as an **Artifact** – a preview panel on the right side of the screen.
+When Claude generates code, it appears as an **Artifact** - a preview panel on the right side of the screen.
 
 Things you can do with Artifacts:
 
-- **Preview** – See the app running directly in Claude
-- **Copy** – Copy the full code to save as an HTML file
-- **Remix** – Ask Claude to modify the Artifact
-- **Publish** – Share a link (Claude Pro feature)
+- **Preview** - See the app running directly in Claude
+- **Copy** - Copy the full code to save as an HTML file
+- **Remix** - Ask Claude to modify the Artifact
+- **Publish** - Share a link (Claude Pro feature)
 
 !!! warning "Artifact Limitations"
 
@@ -155,11 +155,11 @@ Things you can do with Artifacts:
     - LocalStorage may not persist in the Artifact preview
     - Always test the final version in a real browser
 
-### Step 6 – Extend the System
+## Step 6 - Extend the System
 
 Now that you have the base system, add these advanced features one at a time:
 
-**Round 1 – Notifications:**
+**Round 1 - Notifications:**
 
 ```
 Add a notification system: when a PO is overdue (past expected delivery date
@@ -167,7 +167,7 @@ and not in Received/Cancelled status), show a red badge on the dashboard
 and a notification bell icon in the top-right corner.
 ```
 
-**Round 2 – Multi-currency:**
+**Round 2 - Multi-currency:**
 
 ```
 Add multi-currency support: each line item can be in USD, EUR, or ILS.
@@ -175,11 +175,11 @@ Show the total in each currency and also a combined total in ILS using
 fixed exchange rates (1 USD = 3.7 ILS, 1 EUR = 4.0 ILS).
 ```
 
-**Round 3 – Print-friendly:**
+**Round 3 - Print-friendly:**
 
 ```
 Add a "Print PO" button that opens a clean, print-friendly version
-of a specific purchase order – suitable for sending to a supplier
+of a specific purchase order - suitable for sending to a supplier
 (include Elcon logo placeholder, PO details, line items table,
 and space for signature).
 ```

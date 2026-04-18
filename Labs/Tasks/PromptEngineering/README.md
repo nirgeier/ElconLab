@@ -75,7 +75,7 @@ Hint: Explicitly state each constraint: sentence count, tone, required fields.
     - Supplier: TechSensors Ltd.
     - Total Amount: $12,450.00 USD
 
-    Do not include a greeting or sign-off — only the 3-sentence body.
+    Do not include a greeting or sign-off - only the 3-sentence body.
     ```
 
     **Why it works:** Each constraint is explicit and measurable. The "Do not include" instruction prevents extras.
@@ -467,7 +467,7 @@ Hint: Define the target audience, desired length, and which sections to prioriti
 
     Target audience: Non-technical managers who make purchasing decisions
     Maximum length: 300 words
-    
+
     Must include:
     1. Project purpose (1-2 sentences)
     2. Key technical requirements (bullet points, plain language)
@@ -508,7 +508,7 @@ Hint: Specify tone, key facts, desired outcome, and any constraints (no threats,
     - Impact: Production line delay at customer site
 
     Tone: Firm but professional. Maintain good relationship.
-    
+
     The email must:
     1. Reference the PO number and original delivery date
     2. State the business impact clearly
@@ -620,7 +620,7 @@ Hint: Use `{{placeholder}}` syntax and provide instructions for filling them in.
     Endpoint: {{METHOD}} {{PATH}}
     Description: {{DESCRIPTION}}
     Auth Required: {{AUTH_REQUIRED}}
-    
+
     Request Parameters:
     {{PARAMETERS}}
 
@@ -658,28 +658,28 @@ Hint: Plan what each turn accomplishes and how it references the previous turn's
 
 ??? success "Solution"
 
-    **Turn 1 – Define entities:**
+    **Turn 1 - Define entities:**
     ```
     I'm building a CRM for Elcon (instrumentation company).
     List the main entities we need with a 1-sentence description each.
     Just the entity names and descriptions, no schema yet.
     ```
 
-    **Turn 2 – Define relationships:**
+    **Turn 2 - Define relationships:**
     ```
     Good. Now for each entity you listed, define:
     1. The relationships to other entities (1:1, 1:N, N:M)
     2. Draw a simple text-based ER diagram
     ```
 
-    **Turn 3 – Generate schema:**
+    **Turn 3 - Generate schema:**
     ```
     Now generate the CREATE TABLE statements for all entities.
     Include: proper types, foreign keys, indexes, timestamps, soft delete.
     Use UUID for primary keys. Add comments on each table.
     ```
 
-    **Turn 4 – Add security:**
+    **Turn 4 - Add security:**
     ```
     Add Row Level Security policies for multi-user access.
     Users should only see records they created or are assigned to.

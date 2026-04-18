@@ -107,7 +107,7 @@ Hint: Use shadcn Card, Input, Button. Handle loading state, errors, and redirect
 
 #### Scenario:
 
-- All pages except /auth/* must require authentication.
+- All pages except /auth/\* must require authentication.
 
 Hint: Use Next.js middleware.ts with Supabase session check.
 

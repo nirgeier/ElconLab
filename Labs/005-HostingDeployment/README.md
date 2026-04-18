@@ -1,4 +1,4 @@
-# Lab 005 – Hosting & Deployment
+# Lab 005 - Hosting & Deployment
 
 !!! hint "Overview"
 
@@ -25,7 +25,7 @@
 
 ## Background
 
-### From File to URL
+## From File to URL
 
 Right now your app is an HTML file on your laptop. To make it available to your team:
 
@@ -33,7 +33,7 @@ Right now your app is an HTML file on your laptop. To make it available to your 
 Your Laptop → GitHub (code storage) → Vercel (hosting) → https://your-app.vercel.app
 ```
 
-### Hosting Options Compared
+## Hosting Options Compared
 
 | Option           | Cost   | Difficulty | Best For                           |
 | ---------------- | ------ | ---------- | ---------------------------------- |
@@ -48,7 +48,7 @@ Your Laptop → GitHub (code storage) → Vercel (hosting) → https://your-app.
 
 ## Lab Steps
 
-### Step 1 – Create a GitHub Repository
+## Step 1 - Create a GitHub Repository
 
 1. Go to [github.com](https://github.com) and click **New Repository**
 2. Name: `elcon-import-management`
@@ -56,15 +56,15 @@ Your Laptop → GitHub (code storage) → Vercel (hosting) → https://your-app.
 4. Check **Add a README file**
 5. Click **Create repository**
 
-### Step 2 – Upload Your App to GitHub
+## Step 2 - Upload Your App to GitHub
 
-**Option A – Web Upload (easiest):**
+**Option A - Web Upload (easiest):**
 
 1. In your repository, click **Add file** → **Upload files**
 2. Drag your `index.html` file (rename your app to `index.html`)
 3. Click **Commit changes**
 
-**Option B – Via Cursor/Terminal (recommended for future use):**
+**Option B - Via Cursor/Terminal (recommended for future use):**
 
 ```bash
 # Clone the repository
@@ -80,31 +80,31 @@ git commit -m "Add import management app"
 git push
 ```
 
-### Step 3 – Deploy to Vercel
+## Step 3 - Deploy to Vercel
 
 1. Go to [vercel.com](https://vercel.com) and sign in with GitHub
 2. Click **Add New** → **Project**
 3. Select your `elcon-import-management` repository
 4. Framework Preset: **Other**
 5. Click **Deploy**
-6. Wait ~30 seconds – your app is live! 🎉
+6. Wait ~30 seconds - your app is live! 🎉
 
 !!! success "Your App is Live"
 
     Vercel gives you a URL like `https://elcon-import-management.vercel.app`
 
-    Share this URL with your team – they can access the app from any device.
+    Share this URL with your team - they can access the app from any device.
 
-### Step 4 – Automatic Deployments
+## Step 4 - Automatic Deployments
 
 The magic of Vercel + GitHub: every time you push code to GitHub, Vercel automatically redeploys.
 
 1. Go back to your GitHub repo
 2. Edit `index.html` and change the page title
 3. Commit the change
-4. Go to your Vercel URL – the change is live within seconds
+4. Go to your Vercel URL - the change is live within seconds
 
-### Step 5 – Understanding Self-Hosting
+## Step 5 - Understanding Self-Hosting
 
 For Elcon's long-term architecture, you may want to host everything on your own server. Here's the conceptual overview:
 

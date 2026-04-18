@@ -1,4 +1,4 @@
-# Lab 002 – Prompt Engineering for Business Systems
+# Lab 002 - Prompt Engineering for Business Systems
 
 !!! hint "Overview"
 
@@ -23,11 +23,11 @@
 
 ## Background
 
-### Why Prompt Engineering Matters
+## Why Prompt Engineering Matters
 
 The difference between a mediocre AI output and an excellent one is almost always **the quality of the prompt**. A well-structured prompt can save hours of back-and-forth.
 
-### The RCTCO Framework
+## The RCTCO Framework
 
 | Component       | What It Does                                  | Example                                                  |
 | --------------- | --------------------------------------------- | -------------------------------------------------------- |
@@ -41,7 +41,7 @@ The difference between a mediocre AI output and an excellent one is almost alway
 
 ## Lab Steps
 
-### Step 1 – Bad Prompt vs. Good Prompt
+## Step 1 - Bad Prompt vs. Good Prompt
 
 Try this **bad prompt** in Claude:
 
@@ -81,18 +81,18 @@ Output: Generate the complete HTML file with all CSS and JavaScript embedded.
 
     Notice how the structured prompt produces a dramatically better, more complete, and more relevant application.
 
-### Step 2 – Iterative Development
+## Step 2 - Iterative Development
 
 Start with a minimal prompt and build up through conversation:
 
-**Round 1 – Core functionality:**
+**Round 1 - Core functionality:**
 
 ```
 Build a simple supplier management table. I need: supplier name, contact person,
 email, phone, and category. Use a single HTML file with LocalStorage.
 ```
 
-**Round 2 – Add features:**
+**Round 2 - Add features:**
 
 ```
 Great! Now add:
@@ -101,7 +101,7 @@ Great! Now add:
 - Color coding by category
 ```
 
-**Round 3 – Polish:**
+**Round 3 - Polish:**
 
 ```
 Now add:
@@ -115,7 +115,7 @@ Now add:
     Building in rounds is often faster than trying to describe everything at once.
     Each round gives you a working version you can test and refine.
 
-### Step 3 – Common Prompt Patterns for Business Apps
+## Step 3 - Common Prompt Patterns for Business Apps
 
 Practice these common patterns:
 
@@ -148,13 +148,13 @@ Show a Kanban board view and a table view.
 Include date tracking for when each item entered each stage.
 ```
 
-### Step 4 – Hands-On: Build Your Prototype
+## Step 4 - Hands-On: Build Your Prototype
 
 Choose one of these real Elcon use cases and build it with Claude:
 
-1. **Drawing Management Lookup** – Search and browse technical drawings by customer, project, or drawing number
-2. **Supplier Order Tracker** – Track purchase orders through their lifecycle with status updates
-3. **Delivery Note Scanner Interface** – Upload an image, display extracted data, match to a PO
+1. **Drawing Management Lookup** - Search and browse technical drawings by customer, project, or drawing number
+2. **Supplier Order Tracker** - Track purchase orders through their lifecycle with status updates
+3. **Delivery Note Scanner Interface** - Upload an image, display extracted data, match to a PO
 
 !!! note "Workshop Instructions"
 

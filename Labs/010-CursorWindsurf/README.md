@@ -1,4 +1,4 @@
-# Lab 010 – AI Code Editors: Cursor & Windsurf
+# Lab 010 - AI Code Editors: Cursor & Windsurf
 
 !!! hint "Overview"
 
@@ -25,7 +25,7 @@
 
 ## Background
 
-### When to Use What?
+## When to Use What?
 
 | Scenario                          | Best Tool             |
 | --------------------------------- | --------------------- |
@@ -37,26 +37,26 @@
 | Understanding unfamiliar code     | **Cursor / Windsurf** |
 | Quick UI prototyping              | v0.dev                |
 
-### What Is Cursor?
+## What Is Cursor?
 
 Cursor is VS Code (the world's most popular code editor) with AI built in:
 
-- **Chat** – Ask questions about your code, get explanations
-- **Inline Edit** – Select code, press `Cmd+K`, describe the change
-- **Agent Mode** – Describe a task, Cursor edits multiple files automatically
-- **Tab Completion** – AI autocomplete as you type
+- **Chat** - Ask questions about your code, get explanations
+- **Inline Edit** - Select code, press `Cmd+K`, describe the change
+- **Agent Mode** - Describe a task, Cursor edits multiple files automatically
+- **Tab Completion** - AI autocomplete as you type
 
 ---
 
 ## Lab Steps
 
-### Step 1 – Set Up Your Project in Cursor
+## Step 1 - Set Up Your Project in Cursor
 
 1. Open Cursor
 2. Clone your GitHub repo: **File** → **Clone Repository** → paste your repo URL
 3. Or open the folder: **File** → **Open Folder** → select your project folder
 
-### Step 2 – Explore Your Code with AI
+## Step 2 - Explore Your Code with AI
 
 Select any section of code in your HTML file and try these:
 
@@ -80,7 +80,7 @@ I click the "Add Supplier" button and nothing happens.
 What could be wrong? Look at the event listener and the form handling code.
 ```
 
-### Step 3 – Make Changes with Inline Edit
+## Step 3 - Make Changes with Inline Edit
 
 1. Select the code you want to change
 2. Press `Cmd+K` (Mac) or `Ctrl+K` (Windows)
@@ -104,7 +104,7 @@ Make this table sortable by clicking on column headers
 Add input validation: email must contain @, phone must be digits only
 ```
 
-### Step 4 – Agent Mode for Bigger Changes
+## Step 4 - Agent Mode for Bigger Changes
 
 For changes that span multiple parts of the file:
 
@@ -122,7 +122,7 @@ Add a dark mode toggle to this app. When toggled:
 
 Cursor will show you all the changes it wants to make. Review and accept.
 
-### Step 5 – Git Basics: Don't Lose Your Work
+## Step 5 - Git Basics: Don't Lose Your Work
 
 !!! danger "Golden Rule"
 
@@ -159,7 +159,7 @@ git log --oneline
 4. Type a commit message and click ✓ to commit
 5. Click **Sync** to push/pull from GitHub
 
-### Step 6 – Cursor vs. Windsurf
+## Step 6 - Cursor vs. Windsurf
 
 | Feature        | Cursor             | Windsurf        |
 | -------------- | ------------------ | --------------- |

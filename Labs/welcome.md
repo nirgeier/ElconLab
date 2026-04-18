@@ -18,14 +18,14 @@ hide:
 ## About This Course
 
 - A **5-session hands-on** training (20 hours total) focused on empowering Elcon employees to build internal business systems using AI tools.
-- No coding experience required – the focus is on using AI assistants (Claude, Cursor, Bolt.new) to generate code and n8n to automate workflows.
+- No coding experience required - the focus is on using AI assistants (Claude, Cursor, Bolt.new) to generate code and n8n to automate workflows.
 - By the end of this course, participants will be able to independently build, deploy, and maintain custom business applications.
 
 ## Who Is This For?
 
 - Operations, procurement, engineering, and management staff at Elcon
 - Anyone who manages processes in Excel, Monday.com, or other manual tools
-- People who want to turn business ideas into working software – without becoming developers
+- People who want to turn business ideas into working software - without becoming developers
 
 ## Pre-Requirements
 

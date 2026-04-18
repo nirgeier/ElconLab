@@ -1,4 +1,4 @@
-# Lab 001 – The AI Landscape & Setting Up Your Tools
+# Lab 001 - The AI Landscape & Setting Up Your Tools
 
 !!! hint "Overview"
 
@@ -15,8 +15,8 @@
 
 ## What You Will Learn
 
-- What is an LLM (Large Language Model) and how does it work – demystified
-- Prompts, context windows, tokens – the vocabulary you need
+- What is an LLM (Large Language Model) and how does it work - demystified
+- Prompts, context windows, tokens - the vocabulary you need
 - The difference between chat-based AI, code-generation AI, and automation platforms
 - When to use AI vs. traditional software
 - Elcon's current system map and pain points
@@ -25,7 +25,7 @@
 
 ## Background
 
-### Where Elcon Stands Today
+## Where Elcon Stands Today
 
 Elcon currently uses several disconnected systems:
 
@@ -38,7 +38,7 @@ Elcon currently uses several disconnected systems:
 | Excel        | Everything else            | Manual, error-prone, no automation   |
 | File Server  | Drawing management         | Folder-based, no search, no metadata |
 
-### What AI Can Do For Us
+## What AI Can Do For Us
 
 AI tools can help bridge the gaps between these systems by:
 
@@ -47,7 +47,7 @@ AI tools can help bridge the gaps between these systems by:
 - **Creating dashboards** on top of existing data (ERP, CRM)
 - **Processing documents** automatically (OCR, data extraction)
 
-### The Tool Ecosystem
+## The Tool Ecosystem
 
 ```mermaid
 graph TB
@@ -87,34 +87,34 @@ graph TB
 
 ## Lab Steps
 
-### Step 1 – Understand the Key Concepts
+## Step 1 - Understand the Key Concepts
 
 Read through the following definitions. These terms will come up throughout the course:
 
 | Term               | Definition                                                                               |
 | ------------------ | ---------------------------------------------------------------------------------------- |
-| **LLM**            | Large Language Model – an AI trained on text that can generate code, text, and reasoning |
+| **LLM**            | Large Language Model - an AI trained on text that can generate code, text, and reasoning |
 | **Prompt**         | The text you send to an AI to get a response                                             |
 | **Context Window** | The maximum amount of text an AI can "see" at once (e.g., 200K tokens for Claude)        |
 | **Token**          | A chunk of text (~4 characters). AI models read and generate in tokens                   |
 | **Artifact**       | A self-contained output from Claude (code, document, diagram) you can preview and edit   |
 | **Workflow**       | An automated sequence of steps in n8n that connects triggers to actions                  |
-| **API**            | Application Programming Interface – how software systems talk to each other              |
+| **API**            | Application Programming Interface - how software systems talk to each other              |
 
-### Step 2 – Set Up Your Accounts
+## Step 2 - Set Up Your Accounts
 
 Create accounts on each of the following platforms:
 
 !!! note "Account Checklist"
 
-    - [ ] **Claude** – Go to [claude.ai](https://claude.ai) and sign up. Upgrade to Pro if possible.
-    - [ ] **GitHub** – Go to [github.com](https://github.com) and create an account.
-    - [ ] **Supabase** – Go to [supabase.com](https://supabase.com) and sign up with GitHub.
-    - [ ] **Vercel** – Go to [vercel.com](https://vercel.com) and sign up with GitHub.
-    - [ ] **n8n Cloud** – Go to [n8n.io](https://n8n.io) and sign up for the free trial.
-    - [ ] **Cursor** – Go to [cursor.com](https://cursor.com) and download the editor.
+    - [ ] **Claude** - Go to [claude.ai](https://claude.ai) and sign up. Upgrade to Pro if possible.
+    - [ ] **GitHub** - Go to [github.com](https://github.com) and create an account.
+    - [ ] **Supabase** - Go to [supabase.com](https://supabase.com) and sign up with GitHub.
+    - [ ] **Vercel** - Go to [vercel.com](https://vercel.com) and sign up with GitHub.
+    - [ ] **n8n Cloud** - Go to [n8n.io](https://n8n.io) and sign up for the free trial.
+    - [ ] **Cursor** - Go to [cursor.com](https://cursor.com) and download the editor.
 
-### Step 3 – Your First AI Interaction
+## Step 3 - Your First AI Interaction
 
 1. Open Claude at [claude.ai](https://claude.ai)
 2. Type the following prompt:
@@ -136,13 +136,13 @@ Create accounts on each of the following platforms:
     - The more specific your description, the better the output
     - You can iterate and refine through conversation
 
-### Step 4 – Compare Tools
+## Step 4 - Compare Tools
 
 Try the same prompt in different tools and compare the results:
 
-1. **Claude** (claude.ai) – Full conversation, detailed reasoning
-2. **Bolt.new** (bolt.new) – Generates a full working app immediately
-3. **v0.dev** (v0.dev) – Generates a UI component
+1. **Claude** (claude.ai) - Full conversation, detailed reasoning
+2. **Bolt.new** (bolt.new) - Generates a full working app immediately
+3. **v0.dev** (v0.dev) - Generates a UI component
 
 !!! question "Discussion"
 

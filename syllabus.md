@@ -1,13 +1,13 @@
-# AI-Powered Business Systems – Training Syllabus
+# AI-Powered Business Systems - Training Syllabus
 
-**Company:** Elcon – Instrumentation & Control
+**Company:** Elcon - Instrumentation & Control
 **Audience:** Internal staff (operations, procurement, engineering, management)
 **Goal:** Enable employees to independently build, maintain, and extend internal business systems using AI tools and low-code/no-code platforms
 **Duration:** 5 sessions × 4 hours (20 hours total)
 
 ---
 
-## Session 1: Foundations – Understanding the AI Landscape
+## Session 1: Foundations - Understanding the AI Landscape
 
 ### 1.1 Where We Stand Today
 
@@ -17,12 +17,12 @@
 
 ### 1.2 Key Concepts
 
-- What is an LLM (Large Language Model) and how does it work – demystified
-- Prompts, context windows, tokens – the vocabulary you need
+- What is an LLM (Large Language Model) and how does it work - demystified
+- Prompts, context windows, tokens - the vocabulary you need
 - The difference between chat-based AI, code-generation AI, and automation platforms
 - When to use AI vs. traditional software
 
-### 1.3 The Tool Ecosystem – Overview
+### 1.3 The Tool Ecosystem - Overview
 
 | Tool                   | Category                          | What It Does                          | Cost                             |
 | ---------------------- | --------------------------------- | ------------------------------------- | -------------------------------- |
@@ -55,7 +55,7 @@
 
 - Step-by-step: rebuilding the Import Management System (the 4-hour success story)
 - Understanding what Claude actually generated: HTML, CSS, JavaScript, databases
-- File structure and architecture basics – just enough to be dangerous
+- File structure and architecture basics - just enough to be dangerous
 
 ### 2.3 Claude Artifacts & Projects
 
@@ -79,18 +79,18 @@
 
 - Local files vs. databases vs. cloud storage
 - Introduction to Supabase: your free managed PostgreSQL database
-- Tables, rows, columns – database basics for non-developers
+- Tables, rows, columns - database basics for non-developers
 - Connecting a Claude-built app to a real database
 
 ### 3.2 Hosting & Deployment
 
 - Options for hosting internal tools:
-  - **Vercel / Netlify** – free static hosting
-  - **Railway / Render** – backend hosting
-  - **Self-hosted on your own server** – full control
+  - **Vercel / Netlify** - free static hosting
+  - **Railway / Render** - backend hosting
+  - **Self-hosted on your own server** - full control
 - Domain names, HTTPS, and basic security
 
-### 3.3 The Hashavshevet (ERP) Connection – The Dream
+### 3.3 The Hashavshevet (ERP) Connection - The Dream
 
 - Understanding Hashavshevet's database structure (SQL Server)
 - Read-only access: building dashboards on top of ERP data
@@ -111,7 +111,7 @@
 
 ### 4.1 What is n8n and Why It Matters
 
-- Visual workflow automation – the "glue" between your systems
+- Visual workflow automation - the "glue" between your systems
 - n8n vs. Zapier vs. Make (Integromat): why n8n wins for Elcon
   - Self-hosted = your data stays on your server
   - Unlimited workflows on self-hosted
@@ -152,7 +152,7 @@
 
 ---
 
-## Session 5: Putting It All Together – Architecture & Independence
+## Session 5: Putting It All Together - Architecture & Independence
 
 ### 5.1 AI-Assisted Development with Cursor / Windsurf
 
@@ -215,7 +215,7 @@
 
 | Tool           | Purpose                                 | Setup                       |
 | -------------- | --------------------------------------- | --------------------------- |
-| **Claude Pro** | Build apps, analyze data, problem-solve | claude.ai – subscription    |
+| **Claude Pro** | Build apps, analyze data, problem-solve | claude.ai - subscription    |
 | **n8n**        | Automate workflows between systems      | Self-hosted on Elcon server |
 | **Supabase**   | Database for custom apps                | supabase.com or self-hosted |
 | **Cursor**     | Edit and maintain code with AI          | cursor.com                  |
@@ -259,4 +259,4 @@
 
 ---
 
-_Syllabus prepared for Elcon – April 2026_
+_Syllabus prepared for Elcon - April 2026_

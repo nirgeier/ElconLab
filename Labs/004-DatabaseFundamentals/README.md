@@ -1,9 +1,9 @@
-# Lab 004 – Database Fundamentals with Supabase
+# Lab 004 - Database Fundamentals with Supabase
 
 !!! hint "Overview"
 
     - In this lab, you will learn the basics of databases and why they matter for real business applications.
-    - You will set up a Supabase project – a free managed PostgreSQL database with a user-friendly UI.
+    - You will set up a Supabase project - a free managed PostgreSQL database with a user-friendly UI.
     - You will create tables, insert data, and connect your Claude-built app to a real database.
     - By the end of this lab, your application will store data in the cloud instead of LocalStorage.
 
@@ -25,18 +25,18 @@
 
 ## Background
 
-### Why Move Beyond LocalStorage?
+## Why Move Beyond LocalStorage?
 
 | Feature        | LocalStorage                  | Supabase (PostgreSQL)         |
 | -------------- | ----------------------------- | ----------------------------- |
 | Data size      | ~5 MB per domain              | Unlimited (500 MB free tier)  |
-| Multi-user     | No – each browser is separate | Yes – shared database         |
+| Multi-user     | No - each browser is separate | Yes - shared database         |
 | Data safety    | Lost if browser cleared       | Cloud-backed, persistent      |
 | Search         | Manual JavaScript filtering   | SQL queries, full-text search |
 | API access     | None                          | Auto-generated REST & GraphQL |
 | Authentication | None                          | Built-in user management      |
 
-### What Is Supabase?
+## What Is Supabase?
 
 Supabase is an open-source alternative to Firebase that gives you:
 
@@ -51,7 +51,7 @@ Supabase is an open-source alternative to Firebase that gives you:
 
 ## Lab Steps
 
-### Step 1 – Create a Supabase Project
+## Step 1 - Create a Supabase Project
 
 1. Go to [supabase.com](https://supabase.com) and sign in
 2. Click **New Project**
@@ -61,7 +61,7 @@ Supabase is an open-source alternative to Firebase that gives you:
    - Region: Choose the closest (e.g., Frankfurt for Israel)
 4. Wait for the project to be created (~2 minutes)
 
-### Step 2 – Create Your First Table
+## Step 2 - Create Your First Table
 
 Go to the **Table Editor** in the left sidebar and create a `suppliers` table:
 
@@ -104,7 +104,7 @@ Go to the **Table Editor** in the left sidebar and create a `suppliers` table:
         ('CablePro UK', 'James Brown', 'james@cablepro.co.uk', '+44-555-0505', 'Cables', 'UK');
     ```
 
-### Step 3 – Create a Purchase Orders Table
+## Step 3 - Create a Purchase Orders Table
 
 ```sql
 CREATE TABLE purchase_orders (
@@ -132,7 +132,7 @@ CREATE TABLE po_line_items (
 );
 ```
 
-### Step 4 – Connect Your App to Supabase
+## Step 4 - Connect Your App to Supabase
 
 Get your Supabase credentials:
 
@@ -161,15 +161,15 @@ Update the app to:
 5. Keep the same UI and features
 ```
 
-### Step 5 – Explore the Supabase Dashboard
+## Step 5 - Explore the Supabase Dashboard
 
 Supabase comes with powerful built-in tools:
 
-- **Table Editor** – Visual spreadsheet-like interface for viewing/editing data
-- **SQL Editor** – Write and run SQL queries directly
-- **API Docs** – Auto-generated documentation for your tables
-- **Logs** – See all API requests to debug issues
-- **Authentication** – Set up user accounts (we'll use this in Lab 012)
+- **Table Editor** - Visual spreadsheet-like interface for viewing/editing data
+- **SQL Editor** - Write and run SQL queries directly
+- **API Docs** - Auto-generated documentation for your tables
+- **Logs** - See all API requests to debug issues
+- **Authentication** - Set up user accounts (we'll use this in Lab 012)
 
 !!! note "Practice SQL Queries"
 
