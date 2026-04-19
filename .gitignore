@@ -10,7 +10,6 @@ __pycache__/
 # MkDocs build output
 mkdocs-site/
 .mkdocs-build/**
-mkdocs.yml
 
 # MkDocs generated assets
 Labs/assets/

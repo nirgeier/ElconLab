@@ -1,0 +1,227 @@
+###
+### mkdocs-site.yml
+###
+docs_dir: Labs
+edit_uri:
+repo_name: nirgeier/ElconLab
+repo_url: https://github.com/nirgeier/ElconLab
+site_author: Nir Geier - nirgeier@gmail.com
+site_description: A collection of ElconLab Labs
+site_dir: ./mkdocs-site
+site_name: ElconLab
+site_url: https://nirgeier.github.io/ElconLab/
+###
+### mkdocs-theme.yml
+###
+copyright:
+  '©2026 Nir Geier<br/><a href="https://visitor-badge.laobi.icu/badge?page_id=nirgeier" target="_blank" rel="noopener"><img
+  src="https://visitor-badge.laobi.icu/badge?page_id=nirgeier" alt="Visitor Badge"></a>'
+theme:
+  name: material
+  custom_dir: .mkdocs-build/overrides
+  features:
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
+    - content.footnote.tooltips
+    - content.tabs.link
+    - content.tooltips
+    - content.footer.last-updated
+    - content.footer.contributors
+    - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    #- navigation.prune        # Disabled - hides sections when tabs are off
+    - navigation.sections
+    #- navigation.tabs          # Disabled - left nav only
+    #- navigation.tabs.sticky   # Disabled - left nav only
+    #- navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    - toc.integrate # Disabled - replaces full nav with per-page TOC in sidebar
+    - toc.sticky
+
+    #- header.autohide  # Disabled to keep top nav always visible
+
+  # 👈 enables avatar display
+  palette:
+    # Dark mode only
+    - scheme: slate
+      primary: indigo # You can choose any color here
+
+  font:
+    text: Mulish
+    code: JetBrains Mono
+  favicon: assets/favicon.png
+  icon:
+    logo: logo
+    repo: fontawesome/brands/github
+    admonition:
+      note: material/lightbulb
+###
+### mkdocs-extra.yml (project override)
+###
+
+extra:
+  assets:
+    - ./assets/images/
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/nirgeier/ElconLab
+      name: View on GitHub
+      class: social-class__github
+
+    - icon: octicons/repo-forked-16
+      link: https://github.com/nirgeier/ElconLab/network/members
+      name: Fork this repo
+      class: social-class__fork
+
+    - icon: octicons/star-16
+      link: https://github.com/nirgeier/ElconLab/stargazers
+      name: Star this repo
+      class: social-class__star
+
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/nirgeier/
+      name: Connect on LinkedIn
+      class: social-class__linkedin
+
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/U6xW23Ss
+      name: Follow me on Discord
+      class: social-class__discord
+
+    - icon: fontawesome/brands/stack-overflow
+      link: https://stackoverflow.com/users/1755598/codewizard
+      name: Follow me on Stack Overflow
+      class: social-class__stackoverflow
+
+    - icon: fontawesome/brands/whatsapp
+      link: https://wa.me/972548122310
+      name: Follow me on WhatsApp
+      class: social-class__whatsapp
+
+    - icon: fontawesome/solid/envelope
+      link: mailto:nirg@codewizard.co.il
+      name: Email me
+      class: social-class__email
+
+extra_css:
+  - ./assets/stylesheets/codewizard.css?v=1776569212
+  - ./assets/stylesheets/elcon.css?v=1776569212
+extra_javascript:
+  - https://buttons.github.io/buttons.js?v=1776569212
+###
+### mkdocs-plugins.yml
+###
+
+plugins:
+    - awesome-pages
+    - meta
+    # Git
+    #- git-authors
+    - git-committers:
+          branch: main
+          docs_path: Labs # set if your docs folder is not root
+          enabled: true
+          repository: nirgeier/ElconLab
+    - git-revision-date-localized:
+          enable_creation_date: true
+          enable_git_follow: false
+          fallback_to_build_date: true
+          locale: en
+          timezone: UTC
+          type: date
+    - search:
+          separator: "[\\s\\u200b\\-_,:!=\\[\\]()\"`/]+|\\.(?!\\d)|&[lg]t;|(?!\\b)(?=[A-Z\
+              ][a-z])"
+    - minify:
+          minify_html: true
+
+    # Leave this one as the last one in the list
+    - print-site
+    - include-markdown
+###
+### mkdocs-extensions.yml
+###
+
+markdown_extensions:
+        - toc:
+                  permalink: false
+                  baselevel: 3
+                  toc_depth: 3
+        - abbr
+        - tables
+        - admonition # For callouts/notes
+        - footnotes # Footnotes support
+        - attr_list # Attribute lists for elements
+        - def_list # Definition lists
+        - md_in_html # Markdown inside HTML blocks
+        - smarty # Smart punctuation
+        - meta
+        - codehilite:
+                  guess_lang: true # Fallback code highlighting
+        - pymdownx.tabbed:
+                  alternate_style: true
+        - pymdownx.details # Collapsible details
+        - pymdownx.inlinehilite # Inline code highlighting
+        - pymdownx.keys # Keyboard key formatting
+        - pymdownx.tasklist:
+                  custom_checkbox: true
+        - pymdownx.betterem:
+                  smart_enable: all
+        - pymdownx.tilde # Subscript/superscript
+        - pymdownx.snippets # Snippet includes
+        - pymdownx.highlight:
+                  anchor_linenums: true
+                  line_spans: __span
+                  pygments_lang_class: true
+        - pymdownx.superfences:
+                  custom_fences:
+                          - name: mermaid
+                            class: mermaid
+                            format: !!python/name:pymdownx.superfences.fence_code_format
+        - pymdownx.emoji:
+                  emoji_index: !!python/name:material.extensions.emoji.twemoji ""
+                  emoji_generator: !!python/name:material.extensions.emoji.to_svg ""
+###
+### mkdocs-nav.yml
+###
+
+nav:
+  - Labs:
+      - index.md
+      - welcome.md
+      # --- Foundations (001-013) ---
+      - 001-AILandscape: 001-AILandscape/README.md
+      - 002-PromptEngineering: 002-PromptEngineering/README.md
+      - 003-BuildingWithClaude: 003-BuildingWithClaude/README.md
+      - 004-DatabaseFundamentals: 004-DatabaseFundamentals/README.md
+      - 005-HostingDeployment: 005-HostingDeployment/README.md
+      - 006-ERPIntegration: 006-ERPIntegration/README.md
+      - 007-n8nBasics: 007-n8nBasics/README.md
+      - 008-n8nAdvanced: 008-n8nAdvanced/README.md
+      - 009-n8nAI: 009-n8nAI/README.md
+      - 010-CursorWindsurf: 010-CursorWindsurf/README.md
+      - 011-SystemArchitecture: 011-SystemArchitecture/README.md
+      - 012-SecurityBestPractices: 012-SecurityBestPractices/README.md
+      - 013-BuildingYourRoadmap: 013-BuildingYourRoadmap/README.md
+      # --- Final Project ---
+      - 014-FinalProjectCRM: 014-FinalProjectCRM/README.md
+      # --- Tasks ---
+      - Tasks:
+          - Tasks/index.md
+          - Prompt Engineering: Tasks/PromptEngineering/README.md
+          - Supabase & Database: Tasks/Supabase/README.md
+          - Full-Stack Apps: Tasks/FullStack/README.md
+          - Integration: Tasks/Integration/README.md
