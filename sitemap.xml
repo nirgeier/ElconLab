@@ -2,86 +2,226 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://nirgeier.github.io/ElconLab/</loc>
-         <lastmod>2026-04-19</lastmod>
+         <lastmod>2026-06-30</lastmod>
     </url>
     <url>
          <loc>https://nirgeier.github.io/ElconLab/welcome/</loc>
-         <lastmod>2026-04-19</lastmod>
+         <lastmod>2026-06-30</lastmod>
     </url>
     <url>
          <loc>https://nirgeier.github.io/ElconLab/001-AILandscape/</loc>
-         <lastmod>2026-04-19</lastmod>
+         <lastmod>2026-06-30</lastmod>
     </url>
     <url>
          <loc>https://nirgeier.github.io/ElconLab/002-PromptEngineering/</loc>
-         <lastmod>2026-04-19</lastmod>
+         <lastmod>2026-06-30</lastmod>
     </url>
     <url>
          <loc>https://nirgeier.github.io/ElconLab/003-BuildingWithClaude/</loc>
-         <lastmod>2026-04-19</lastmod>
+         <lastmod>2026-06-30</lastmod>
     </url>
     <url>
          <loc>https://nirgeier.github.io/ElconLab/004-DatabaseFundamentals/</loc>
-         <lastmod>2026-04-19</lastmod>
+         <lastmod>2026-06-30</lastmod>
     </url>
     <url>
          <loc>https://nirgeier.github.io/ElconLab/005-HostingDeployment/</loc>
-         <lastmod>2026-04-19</lastmod>
+         <lastmod>2026-06-30</lastmod>
     </url>
     <url>
          <loc>https://nirgeier.github.io/ElconLab/006-ERPIntegration/</loc>
-         <lastmod>2026-04-19</lastmod>
+         <lastmod>2026-06-30</lastmod>
     </url>
     <url>
          <loc>https://nirgeier.github.io/ElconLab/007-n8nBasics/</loc>
-         <lastmod>2026-04-19</lastmod>
+         <lastmod>2026-06-30</lastmod>
     </url>
     <url>
          <loc>https://nirgeier.github.io/ElconLab/008-n8nAdvanced/</loc>
-         <lastmod>2026-04-19</lastmod>
+         <lastmod>2026-06-30</lastmod>
     </url>
     <url>
          <loc>https://nirgeier.github.io/ElconLab/009-n8nAI/</loc>
-         <lastmod>2026-04-19</lastmod>
+         <lastmod>2026-06-30</lastmod>
     </url>
     <url>
          <loc>https://nirgeier.github.io/ElconLab/010-CursorWindsurf/</loc>
-         <lastmod>2026-04-19</lastmod>
+         <lastmod>2026-06-30</lastmod>
     </url>
     <url>
          <loc>https://nirgeier.github.io/ElconLab/011-SystemArchitecture/</loc>
-         <lastmod>2026-04-19</lastmod>
+         <lastmod>2026-06-30</lastmod>
     </url>
     <url>
          <loc>https://nirgeier.github.io/ElconLab/012-SecurityBestPractices/</loc>
-         <lastmod>2026-04-19</lastmod>
+         <lastmod>2026-06-30</lastmod>
     </url>
     <url>
          <loc>https://nirgeier.github.io/ElconLab/013-BuildingYourRoadmap/</loc>
-         <lastmod>2026-04-19</lastmod>
+         <lastmod>2026-06-30</lastmod>
     </url>
     <url>
          <loc>https://nirgeier.github.io/ElconLab/014-FinalProjectCRM/</loc>
-         <lastmod>2026-04-19</lastmod>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/ElconLab/015-AgentsSubagents/</loc>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/ElconLab/Claude/01-introduction/</loc>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/ElconLab/Claude/02-claude-code-under-the-hood/</loc>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/ElconLab/Claude/03-claude-md-plan-mode/</loc>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/ElconLab/Claude/04-permissions/</loc>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/ElconLab/Claude/05-effort-context-windows/</loc>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/ElconLab/Claude/06-skills/</loc>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/ElconLab/Claude/07-hooks/</loc>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/ElconLab/Claude/08-mcp-overview/</loc>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/ElconLab/Claude/09-subagents/</loc>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/ElconLab/Claude/10-agent-teams/</loc>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/ElconLab/Claude/11-skill-creator/</loc>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/ElconLab/Claude/12-plugins-overview/</loc>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/ElconLab/Claude/13-cowork/</loc>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/ElconLab/Claude/14-claude-code-desktop-github-workflow/</loc>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/ElconLab/Claude/15-agent-sdk/</loc>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/ElconLab/Claude/16-wrapping-up/</loc>
+         <lastmod>2026-06-30</lastmod>
     </url>
     <url>
          <loc>https://nirgeier.github.io/ElconLab/Tasks/</loc>
-         <lastmod>2026-04-19</lastmod>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/ElconLab/Tasks/Claude/</loc>
+         <lastmod>2026-06-30</lastmod>
     </url>
     <url>
          <loc>https://nirgeier.github.io/ElconLab/Tasks/FullStack/</loc>
-         <lastmod>2026-04-19</lastmod>
+         <lastmod>2026-06-30</lastmod>
     </url>
     <url>
          <loc>https://nirgeier.github.io/ElconLab/Tasks/Integration/</loc>
-         <lastmod>2026-04-19</lastmod>
+         <lastmod>2026-06-30</lastmod>
     </url>
     <url>
          <loc>https://nirgeier.github.io/ElconLab/Tasks/PromptEngineering/</loc>
-         <lastmod>2026-04-19</lastmod>
+         <lastmod>2026-06-30</lastmod>
     </url>
     <url>
          <loc>https://nirgeier.github.io/ElconLab/Tasks/Supabase/</loc>
-         <lastmod>2026-04-19</lastmod>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/ElconLab/n8n/01-introduction/</loc>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/ElconLab/n8n/02-install-locally/</loc>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/ElconLab/n8n/03-core-concepts/</loc>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/ElconLab/n8n/04-triggers/</loc>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/ElconLab/n8n/05-data-and-expressions/</loc>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/ElconLab/n8n/06-http-and-apis/</loc>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/ElconLab/n8n/07-logic-and-flow/</loc>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/ElconLab/n8n/08-credentials-and-security/</loc>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/ElconLab/n8n/09-ai-nodes-and-agents/</loc>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/ElconLab/n8n/10-error-handling-and-deploy/</loc>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/ElconLab/n8n/11-templates/</loc>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/ElconLab/n8n/12-first-workflow-step-by-step/</loc>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/ElconLab/n8n/13-advanced-data-transformation/</loc>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/ElconLab/n8n/14-database-operations/</loc>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/ElconLab/n8n/15-email-workflows/</loc>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/ElconLab/n8n/16-file-operations/</loc>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/ElconLab/n8n/17-real-world-lead-workflow/</loc>
+         <lastmod>2026-06-30</lastmod>
     </url>
 </urlset>

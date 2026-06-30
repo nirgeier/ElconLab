@@ -1,0 +1,16 @@
+{
+  "name": "agent-sdk-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p .",
+    "demo": "node dist/run-agent-team.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/claude-agent-sdk": "^0.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.0"
+  }
+}
