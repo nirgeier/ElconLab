@@ -15,7 +15,7 @@ hide:
 
 ## Course Modules
 
-### Foundations (001-013)
+### Foundations (001-015)
 
 | #   | Lab                                                              | Description                                                              |
 | --- | ---------------------------------------------------------------- | ------------------------------------------------------------------------ |
@@ -32,6 +32,7 @@ hide:
 | 011 | [System Architecture](011-SystemArchitecture/README.md)          | Designing Elcon's target architecture - ERP, database, apps, automation. |
 | 012 | [Security & Best Practices](012-SecurityBestPractices/README.md) | Authentication, backups, safe patterns for internal business tools.      |
 | 013 | [Building Your Roadmap](013-BuildingYourRoadmap/README.md)       | Prioritize what to build, assign ownership, and plan your next steps.    |
+| 015 | [Agents & Subagents Lab](015-AgentsSubagents/README.md)          | Build custom agents and subagents with runnable Claude Code and SDK demos. |
 
 ### Final Project
 
@@ -49,6 +50,7 @@ hide:
 | [Supabase & Database](Tasks/Supabase/README.md)         | 20    | SQL, RLS, functions, triggers, Edge Functions, migrations           |
 | [Full-Stack Apps](Tasks/FullStack/README.md)            | 15    | Next.js, auth, CRUD, dashboards, charts, deployment                 |
 | [Integration](Tasks/Integration/README.md)              | 15    | End-to-end pipelines, ERP sync, OCR, quote-to-cash                  |
+| [Claude](Tasks/Claude/README.md)                        | 15    | Skills, subagents, hooks, permissions, agent teams, and Agent SDK demos |
 
 ---
 

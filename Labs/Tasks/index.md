@@ -40,6 +40,12 @@ hide:
 | --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Integration Tasks](Integration/) | Collection of 15 integration exercises combining Claude Code + n8n + Supabase to build end-to-end business automations, ERP connectors, notification systems, and data pipelines. |
 
+### Claude Tasks
+
+| Task                        | Description                                                                                                                                                                              |
+| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Claude Tasks](Claude/)     | Collection of 15 Claude-focused exercises covering skills, subagents, hooks, permissions, agent team workflows, and Agent SDK demos for practical automation use-cases.               |
+
 ---
 
 Happy learning and building at Elcon!

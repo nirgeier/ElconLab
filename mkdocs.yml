@@ -11,7 +11,7 @@ site_dir: ./mkdocs-site
 site_name: ElconLab
 site_url: https://nirgeier.github.io/ElconLab/
 ###
-### mkdocs-theme.yml
+### mkdocs-theme.yml (project override)
 ###
 copyright:
   '©2026 Nir Geier<br/><a href="https://visitor-badge.laobi.icu/badge?page_id=nirgeier" target="_blank" rel="noopener"><img
@@ -37,26 +37,21 @@ theme:
     - navigation.instant
     - navigation.instant.prefetch
     - navigation.instant.progress
-    #- navigation.prune        # Disabled - hides sections when tabs are off
     - navigation.sections
-    #- navigation.tabs          # Disabled - left nav only
-    #- navigation.tabs.sticky   # Disabled - left nav only
-    #- navigation.top
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
     - navigation.tracking
     - search.highlight
     - search.share
     - search.suggest
     - toc.follow
-    - toc.integrate # Disabled - replaces full nav with per-page TOC in sidebar
+    - toc.integrate
     - toc.sticky
 
-    #- header.autohide  # Disabled to keep top nav always visible
-
-  # 👈 enables avatar display
   palette:
-    # Dark mode only
     - scheme: slate
-      primary: indigo # You can choose any color here
+      primary: indigo
 
   font:
     text: Mulish
@@ -117,36 +112,31 @@ extra:
       class: social-class__email
 
 extra_css:
-  - ./assets/stylesheets/codewizard.css?v=1776569212
-  - ./assets/stylesheets/elcon.css?v=1776569212
+  - ./assets/stylesheets/codewizard.css?v=1782887691
+  - ./assets/stylesheets/elcon.css?v=1782887691
 extra_javascript:
-  - https://buttons.github.io/buttons.js?v=1776569212
-###
-### mkdocs-plugins.yml
-###
-
+  - https://buttons.github.io/buttons.js?v=1782887691
 plugins:
     - awesome-pages
     - meta
-    # Git
+    # Git - Temporarily disabled due to git config issues
     #- git-authors
-    - git-committers:
-          branch: main
-          docs_path: Labs # set if your docs folder is not root
-          enabled: true
-          repository: nirgeier/ElconLab
-    - git-revision-date-localized:
-          enable_creation_date: true
-          enable_git_follow: false
-          fallback_to_build_date: true
-          locale: en
-          timezone: UTC
-          type: date
+    #- git-committers:
+    #      branch: main
+    #      docs_path: Labs
+    #      enabled: true
+    #      repository: nirgeier/ElconLab
+    #- git-revision-date-localized:
+    #      enable_creation_date: true
+    #      enable_git_follow: false
+    #      fallback_to_build_date: true
+    #      locale: en
+    #      timezone: UTC
+    #      type: date
     - search:
-          separator: "[\\s\\u200b\\-_,:!=\\[\\]()\"`/]+|\\.(?!\\d)|&[lg]t;|(?!\\b)(?=[A-Z\
-              ][a-z])"
+            separator: "[\\s\\u200b\\-_,:!=\\[\\]()\"`/]+|\\.(?!\\d)|&[lg]t;|(?!\\b)(?=[A-Z][a-z])"
     - minify:
-          minify_html: true
+            minify_html: true
 
     # Leave this one as the last one in the list
     - print-site
@@ -156,72 +146,104 @@ plugins:
 ###
 
 markdown_extensions:
-        - toc:
-                  permalink: false
-                  baselevel: 3
-                  toc_depth: 3
-        - abbr
-        - tables
-        - admonition # For callouts/notes
-        - footnotes # Footnotes support
-        - attr_list # Attribute lists for elements
-        - def_list # Definition lists
-        - md_in_html # Markdown inside HTML blocks
-        - smarty # Smart punctuation
-        - meta
-        - codehilite:
-                  guess_lang: true # Fallback code highlighting
-        - pymdownx.tabbed:
-                  alternate_style: true
-        - pymdownx.details # Collapsible details
-        - pymdownx.inlinehilite # Inline code highlighting
-        - pymdownx.keys # Keyboard key formatting
-        - pymdownx.tasklist:
-                  custom_checkbox: true
-        - pymdownx.betterem:
-                  smart_enable: all
-        - pymdownx.tilde # Subscript/superscript
-        - pymdownx.snippets # Snippet includes
-        - pymdownx.highlight:
-                  anchor_linenums: true
-                  line_spans: __span
-                  pygments_lang_class: true
-        - pymdownx.superfences:
-                  custom_fences:
-                          - name: mermaid
-                            class: mermaid
-                            format: !!python/name:pymdownx.superfences.fence_code_format
-        - pymdownx.emoji:
-                  emoji_index: !!python/name:material.extensions.emoji.twemoji ""
-                  emoji_generator: !!python/name:material.extensions.emoji.to_svg ""
+      - toc:
+              permalink: false
+              baselevel: 3
+              toc_depth: 3
+      - abbr
+      - tables
+      - admonition # For callouts/notes
+      - footnotes # Footnotes support
+      - attr_list # Attribute lists for elements
+      - def_list # Definition lists
+      - md_in_html # Markdown inside HTML blocks
+      - smarty # Smart punctuation
+      - meta
+      - codehilite:
+              guess_lang: true # Fallback code highlighting
+      - pymdownx.tabbed:
+              alternate_style: true
+      - pymdownx.details # Collapsible details
+      - pymdownx.inlinehilite # Inline code highlighting
+      - pymdownx.keys # Keyboard key formatting
+      - pymdownx.tasklist:
+              custom_checkbox: true
+      - pymdownx.betterem:
+              smart_enable: all
+      - pymdownx.tilde # Subscript/superscript
+      - pymdownx.snippets # Snippet includes
+      - pymdownx.highlight:
+              anchor_linenums: true
+              line_spans: __span
+              pygments_lang_class: true
+      - pymdownx.superfences:
+              custom_fences:
+                    - name: mermaid
+                      class: mermaid
+                      format: !!python/name:pymdownx.superfences.fence_code_format
+      - pymdownx.emoji:
+              emoji_index: !!python/name:material.extensions.emoji.twemoji
+              emoji_generator: !!python/name:material.extensions.emoji.to_svg
 ###
 ### mkdocs-nav.yml
 ###
 
 nav:
-  - Labs:
-      - index.md
-      - welcome.md
-      # --- Foundations (001-013) ---
-      - 001-AILandscape: 001-AILandscape/README.md
-      - 002-PromptEngineering: 002-PromptEngineering/README.md
-      - 003-BuildingWithClaude: 003-BuildingWithClaude/README.md
-      - 004-DatabaseFundamentals: 004-DatabaseFundamentals/README.md
-      - 005-HostingDeployment: 005-HostingDeployment/README.md
-      - 006-ERPIntegration: 006-ERPIntegration/README.md
-      - 007-n8nBasics: 007-n8nBasics/README.md
-      - 008-n8nAdvanced: 008-n8nAdvanced/README.md
-      - 009-n8nAI: 009-n8nAI/README.md
-      - 010-CursorWindsurf: 010-CursorWindsurf/README.md
-      - 011-SystemArchitecture: 011-SystemArchitecture/README.md
-      - 012-SecurityBestPractices: 012-SecurityBestPractices/README.md
-      - 013-BuildingYourRoadmap: 013-BuildingYourRoadmap/README.md
-      # --- Final Project ---
-      - 014-FinalProjectCRM: 014-FinalProjectCRM/README.md
-      # --- Tasks ---
-      - Tasks:
-          - Tasks/index.md
-          - Prompt Engineering: Tasks/PromptEngineering/README.md
-          - Supabase & Database: Tasks/Supabase/README.md
-          - Full-Stack Apps: Tasks/FullStack/README.md
-          - Integration: Tasks/Integration/README.md
+- Labs:
+  - index.md
+  - welcome.md
+  # --- Foundations (001-013) ---
+  - 001-AILandscape: 001-AILandscape/README.md
+  - 002-PromptEngineering: 002-PromptEngineering/README.md
+  - 003-BuildingWithClaude: 003-BuildingWithClaude/README.md
+  - 004-DatabaseFundamentals: 004-DatabaseFundamentals/README.md
+  - 005-HostingDeployment: 005-HostingDeployment/README.md
+  - 006-ERPIntegration: 006-ERPIntegration/README.md
+  - 007-n8nBasics: 007-n8nBasics/README.md
+  - 008-n8nAdvanced: 008-n8nAdvanced/README.md
+  - 009-n8nAI: 009-n8nAI/README.md
+  - 010-CursorWindsurf: 010-CursorWindsurf/README.md
+  - 011-SystemArchitecture: 011-SystemArchitecture/README.md
+  - 012-SecurityBestPractices: 012-SecurityBestPractices/README.md
+  - 013-BuildingYourRoadmap: 013-BuildingYourRoadmap/README.md
+  - 015-AgentsSubagents: 015-AgentsSubagents/README.md
+  # --- Final Project ---
+  - 014-FinalProjectCRM: 014-FinalProjectCRM/README.md
+  # --- Tasks ---
+  - Tasks:
+    - Tasks/index.md
+    - Prompt Engineering: Tasks/PromptEngineering/README.md
+    - Supabase & Database: Tasks/Supabase/README.md
+    - Full-Stack Apps: Tasks/FullStack/README.md
+    - Integration: Tasks/Integration/README.md
+    - Claude: Tasks/Claude/README.md
+- Claude:
+  - 01 Introduction: Claude/01-introduction.md
+  - 02 Under the Hood: Claude/02-claude-code-under-the-hood.md
+  - 03 CLAUDE.md and Plan Mode: Claude/03-claude-md-plan-mode.md
+  - 04 Permissions: Claude/04-permissions.md
+  - 05 Effort and Context Windows: Claude/05-effort-context-windows.md
+  - 06 Skills: Claude/06-skills.md
+  - 07 Hooks: Claude/07-hooks.md
+  - 08 MCP Overview: Claude/08-mcp-overview.md
+  - 09 Subagents: Claude/09-subagents.md
+  - 10 Agent Teams: Claude/10-agent-teams.md
+  - 11 Skill Creator: Claude/11-skill-creator.md
+  - 12 Plugins Overview: Claude/12-plugins-overview.md
+  - 13 Cowork: Claude/13-cowork.md
+  - 14 Desktop and GitHub Workflow: Claude/14-claude-code-desktop-github-workflow.md
+  - 15 Agent SDK: Claude/15-agent-sdk.md
+  - 16 Wrapping Up: Claude/16-wrapping-up.md
+- n8s:
+  - 01 Introduction: n8n/01-introduction.md
+  - 02 Install Locally: n8n/02-install-locally.md
+  - 03 Core Concepts: n8n/03-core-concepts.md
+  - 11 Templates: n8n/11-templates.md
+  - 12 First Workflow (Step by Step): n8n/12-first-workflow-step-by-step.md
+  - 04 Triggers: n8n/04-triggers.md
+  - 05 Data and Expressions: n8n/05-data-and-expressions.md
+  - 06 HTTP and APIs: n8n/06-http-and-apis.md
+  - 07 Logic and Flow: n8n/07-logic-and-flow.md
+  - 08 Credentials and Security: n8n/08-credentials-and-security.md
+  - 09 AI Nodes and Agents: n8n/09-ai-nodes-and-agents.md
+  - 10 Error Handling and Deploy: n8n/10-error-handling-and-deploy.md

@@ -1,0 +1,16 @@
+- Introduction: https://master.dev/courses/claude-code/introduction/?w=Claude
+- Claude Code Under the Hood: https://master.dev/courses/claude-code/claude-code-under-the-hood/?w=Claude
+- CLAUDE.md & Plan Mode: https://master.dev/courses/claude-code/claude-md-plan-mode/?w=Claude
+- Permissions: https://master.dev/courses/claude-code/permissions/?w=Claude
+- Effort & Context Windows: https://master.dev/courses/claude-code/effort-context-windows/?w=Claude
+- Skills: https://master.dev/courses/claude-code/skills/?w=Claude
+- Hooks: https://master.dev/courses/claude-code/hooks/?w=Claude
+- MCP Overview: https://master.dev/courses/claude-code/mcp-overview/?w=Claude
+- Subagents: https://master.dev/courses/claude-code/subagents/?w=Claude
+- Agent Teams: https://master.dev/courses/claude-code/agent-teams/?w=Claude
+- Skill Creator: https://master.dev/courses/claude-code/skill-creator/?w=Claude
+- Plugins Overview: https://master.dev/courses/claude-code/plugins-overview/?w=Claude
+- Cowork: https://master.dev/courses/claude-code/cowork/?w=Claude
+- Claude Code Desktop GitHub Workflow: https://master.dev/courses/claude-code/claude-code-desktop-github-workflow/?w=Claude
+- Agent SDK: https://master.dev/courses/claude-code/agent-sdk/?w=Claude
+- Wrapping Up: https://master.dev/courses/claude-code/wrapping-up/?w=Claude

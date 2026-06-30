@@ -1,0 +1,16 @@
+{
+  "name": "claude-code-notes",
+  "version": "1.0.0",
+  "description": "Slide-style study notes covering 16 Claude Code topics, organized one deck per topic in [`slides/`](./slides/). Each file is plain markdown with slides separated by `---`, so it renders well in any markdown viewer or slide tool (Marp, reveal-md, etc.).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "pptxgenjs": "^4.0.1"
+  }
+}

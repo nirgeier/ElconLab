@@ -111,7 +111,7 @@ graph LR
     T["Schedule Trigger<br/>(no data)"] --> HR["HTTP Request<br/>(returns array<br/>of overdue POs)"]
     HR --> IF["IF Node<br/>(checks if<br/>array > 0)"]
     IF --> E["Email<br/>(sends to<br/>team)"]
-    
+
     style T fill:#e1f5fe
     style E fill:#e8f5e9
 ```
@@ -138,7 +138,7 @@ graph LR
     ES["External System"] --> WH["Webhook URL<br/>(listens)"]
     WH --> FN["Function Node<br/>(transform)"]
     FN --> SB["Supabase/HTTP<br/>(save)"]
-    
+
     style ES fill:#fff3e0
     style SB fill:#e8f5e9
 ```
@@ -157,7 +157,7 @@ This pattern is useful for:
 graph LR
     DB["Database<br/>Query"] --> CN["Code Node<br/>(transform)"]
     CN --> WT["Write to<br/>Another Table"]
-    
+
     style DB fill:#e3f2fd
     style WT fill:#c8e6c9
 ```
@@ -169,7 +169,7 @@ graph LR
     SCH["Schedule<br/>(daily)"] --> QDB["Query<br/>Database"]
     QDB --> IF["IF<br/>(condition)"]
     IF --> NOT["Email/Slack<br/>(notify)"]
-    
+
     style SCH fill:#e1f5fe
     style NOT fill:#f8bbd0
 ```
@@ -180,7 +180,7 @@ graph LR
 graph LR
     WH["Webhook<br/>(receives data)"] --> PR["Process"]
     PR --> HR["HTTP Response<br/>(reply back)"]
-    
+
     style WH fill:#fff9c4
     style HR fill:#c8e6c9
 ```

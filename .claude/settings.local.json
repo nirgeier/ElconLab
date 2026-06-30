@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "mcp__plugin_context-mode_context-mode__ctx_batch_execute"
+      "Skill(deep-research)",
+      "Workflow(deep-research)"
     ]
   }
 }

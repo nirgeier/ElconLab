@@ -12,20 +12,20 @@
 
 ```mermaid
 graph TB
-    subgraph "Frontend (Next.js)"
+    subgraph FE["Frontend (Next.js)"]
         UI["CRM Dashboard"]
         FORMS["Forms & Tables"]
         AUTH["Auth (Supabase)"]
     end
 
-    subgraph "Backend (Supabase)"
+    subgraph BE["Backend (Supabase)"]
         DB["PostgreSQL Database"]
         EDGE["Edge Functions"]
         RLS["Row Level Security"]
         STORAGE["File Storage"]
     end
 
-    subgraph "Automation (n8n)"
+    subgraph AUTO["Automation (n8n)"]
         WF1["Lead Capture Workflow"]
         WF2["Follow-up Reminders"]
         WF3["Email Campaigns"]
@@ -46,14 +46,14 @@ graph TB
     DB --> WF5
     WF6 --> DB
 
-    style UI fill:#1e293b,stroke:#2563eb,color:#e2e8f0
-    style DB fill:#1e293b,stroke:#16a34a,color:#e2e8f0
-    style WF1 fill:#1e293b,stroke:#f59e0b,color:#e2e8f0
-    style WF2 fill:#1e293b,stroke:#f59e0b,color:#e2e8f0
-    style WF3 fill:#1e293b,stroke:#f59e0b,color:#e2e8f0
-    style WF4 fill:#1e293b,stroke:#f59e0b,color:#e2e8f0
-    style WF5 fill:#1e293b,stroke:#f59e0b,color:#e2e8f0
-    style WF6 fill:#1e293b,stroke:#f59e0b,color:#e2e8f0
+    style UI fill:#2563eb,stroke:#1e293b,color:#fff
+    style DB fill:#16a34a,stroke:#1e293b,color:#fff
+    style WF1 fill:#f59e0b,stroke:#1e293b,color:#fff
+    style WF2 fill:#f59e0b,stroke:#1e293b,color:#fff
+    style WF3 fill:#f59e0b,stroke:#1e293b,color:#fff
+    style WF4 fill:#f59e0b,stroke:#1e293b,color:#fff
+    style WF5 fill:#f59e0b,stroke:#1e293b,color:#fff
+    style WF6 fill:#f59e0b,stroke:#1e293b,color:#fff
 ```
 
 ---
@@ -255,41 +255,39 @@ Use React Query for data fetching."
 ## Dashboard Wireframe
 
 ```mermaid
-graph TD
-    subgraph "CRM Dashboard"
-        subgraph "Top Bar"
-            SEARCH["🔍 Global Search"]
-            USER["👤 User Menu"]
-        end
 
-        subgraph "Sidebar"
-            NAV1["📊 Dashboard"]
-            NAV2["👥 Contacts"]
-            NAV3["🏢 Companies"]
-            NAV4["💰 Deals"]
-            NAV5["📋 Activities"]
-            NAV6["📈 Reports"]
-        end
-
-        subgraph "Main Content"
-            subgraph "KPI Row"
-                K1["Contacts<br/>247"]
-                K2["Open Deals<br/>$1.2M"]
-                K3["Win Rate<br/>34%"]
-                K4["Activities Due<br/>12"]
-            end
-
-            subgraph "Charts"
-                C1["Pipeline<br/>(Bar Chart)"]
-                C2["Revenue Forecast<br/>(Line Chart)"]
-            end
-
-            subgraph "Recent"
-                R1["Recent Activities"]
-                R2["Recent Deals"]
-            end
-        end
+graph TB
+    subgraph TOP["🔍 Top Bar"]
+        SEARCH["Global Search"]
+        USER["User Menu"]
     end
+
+    subgraph SIDEBAR["Navigation"]
+        NAV1["📊 Dashboard"]
+        NAV2["👥 Contacts"]
+        NAV3["🏢 Companies"]
+        NAV4["💰 Deals"]
+        NAV5["📋 Activities"]
+        NAV6["📈 Reports"]
+    end
+
+    subgraph KPI["KPI Cards"]
+        K1["Contacts: 247"]
+        K2["Open Deals: $1.2M"]
+        K3["Win Rate: 34%"]
+        K4["Due Activities: 12"]
+    end
+
+    subgraph CONTENT["Main Content"]
+        C1["Pipeline Chart"]
+        C2["Revenue Forecast"]
+        R1["Recent Activities"]
+        R2["Recent Deals"]
+    end
+
+    TOP --> SIDEBAR
+    SIDEBAR --> KPI
+    KPI --> CONTENT
 ```
 
 ---
